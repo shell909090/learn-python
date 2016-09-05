@@ -917,8 +917,8 @@ a is 100 and b is 5 and c is 50
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-CPU times: user 3.37 s, sys: 20 ms, total: 3.39 s
-Wall time: 3.35 s
+CPU times: user 3.4 s, sys: 16 ms, total: 3.42 s
+Wall time: 3.41 s
 
 </pre>
 </div>
@@ -982,7 +982,7 @@ Wall time: 3.35 s
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 CPU times: user 0 ns, sys: 0 ns, total: 0 ns
-Wall time: 51 µs
+Wall time: 78 µs
 
 </pre>
 </div>
@@ -1058,7 +1058,7 @@ Wall time: 51 µs
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 CPU times: user 0 ns, sys: 0 ns, total: 0 ns
-Wall time: 62.2 µs
+Wall time: 81.1 µs
 
 </pre>
 </div>
@@ -1169,7 +1169,7 @@ Wall time: 62.2 µs
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;generator object fib_seq at 0x7f78fbc3e8c0&gt;
+&lt;generator object fib_seq at 0x7f9a124368c0&gt;
 [2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711]
 
 </pre>
@@ -2447,7 +2447,7 @@ unicode
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 72 9月   5 15:44 abc.txt
+-rw-r--r-- 1 shell shell 72 9月   5 18:14 abc.txt
 
 </pre>
 </div>
@@ -2572,7 +2572,7 @@ unicode
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 48 9月   5 15:44 abc.txt
+-rw-r--r-- 1 shell shell 48 9月   5 18:14 abc.txt
 
 </pre>
 </div>
@@ -2609,22 +2609,7 @@ unicode
 </div>
 </div>
 
-</div><div style=display:none>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span></span><span class="o">!</span>rm abc.txt
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-    </div></section><section>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2636,6 +2621,76 @@ unicode
 </div>
 </div>
 </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">答案</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;abc.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fi</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">fi</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;gbk&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;abc.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+    <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="o">!</span>cat abc.txt
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+想象一下这里是某些中文内容，也可能是日文或者韩文
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="o">!</span>rm -f abc.txt
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2660,7 +2715,7 @@ unicode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># encoding=utf-8</span>
@@ -2702,7 +2757,7 @@ unicode
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># encoding=utf-8</span>
@@ -2909,7 +2964,7 @@ unicode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -2951,24 +3006,14 @@ False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
-
-<span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">platform</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 
-<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">platform</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Windows&#39;</span><span class="p">):</span>
-    <span class="n">logging_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;HOMEDRIVE&#39;</span><span class="p">),</span>
-                                <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;HOMEPATH&#39;</span><span class="p">),</span>
-                                <span class="s1">&#39;test.log&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">logging_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;HOME&#39;</span><span class="p">),</span>
-                                <span class="s1">&#39;test.log&#39;</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Logging to&quot;</span><span class="p">,</span> <span class="n">logging_file</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;normal output&#39;</span><span class="p">)</span>
 
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
 <span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
@@ -3000,7 +3045,7 @@ WARNING:root:Dying now
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-Logging to /home/shell/test.log
+normal output
 
 </pre>
 </div>
@@ -3032,7 +3077,7 @@ Logging to /home/shell/test.log
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -3050,7 +3095,7 @@ Logging to /home/shell/test.log
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[52]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3101,7 +3146,7 @@ Logging to /home/shell/test.log
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -3122,7 +3167,7 @@ Logging to /home/shell/test.log
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;_sre.SRE_Match object at 0x7f78ed6d4780&gt;
+&lt;_sre.SRE_Match object at 0x7f9a0819a7e8&gt;
 None
 
 </pre>
@@ -3136,7 +3181,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -3160,10 +3205,10 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;_sre.SRE_Match object at 0x7f78ed6d47e8&gt;
+&lt;_sre.SRE_Match object at 0x7f9a0819a988&gt;
 None
 None
-&lt;_sre.SRE_Match object at 0x7f78ed6d47e8&gt;
+&lt;_sre.SRE_Match object at 0x7f9a0819a988&gt;
 
 </pre>
 </div>
@@ -3176,7 +3221,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -3198,7 +3243,7 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;_sre.SRE_Match object at 0x7f78fbbfa458&gt;
+&lt;_sre.SRE_Match object at 0x7f9a123f53c0&gt;
 None
 
 </pre>
@@ -3212,7 +3257,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -3234,7 +3279,7 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;_sre.SRE_Match object at 0x7f78fbbfa6b8&gt;
+&lt;_sre.SRE_Match object at 0x7f9a123f5750&gt;
 None
 
 </pre>
@@ -3257,7 +3302,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
@@ -3295,7 +3340,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>ls -l shoplist.data
@@ -3312,7 +3357,7 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 46 9月   5 15:44 shoplist.data
+-rw-r--r-- 1 shell shell 46 9月   5 18:14 shoplist.data
 
 </pre>
 </div>
@@ -3325,7 +3370,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>rm shoplist.data
@@ -3377,7 +3422,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
@@ -3404,6 +3449,15 @@ None
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>帮助文档看<a href="https://docs.python.org/2/library/datetime.html#datetime.date.weekday">这里</a>。</p>
+</div>
+</div>
 </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -3443,7 +3497,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">15</span>
@@ -3457,7 +3511,7 @@ None
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[59]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3474,7 +3528,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">15</span><span class="p">))</span>
@@ -3488,7 +3542,7 @@ None
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[60]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[62]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3505,7 +3559,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">1515</span>
@@ -3519,7 +3573,7 @@ None
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[63]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3536,7 +3590,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">1515</span><span class="p">))</span>
@@ -3550,7 +3604,7 @@ None
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[62]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[64]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3568,7 +3622,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># log(2**15151515) == log2 * 15151515 == log10 * (log2/log10) * 15151515</span>
@@ -3614,7 +3668,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -3698,13 +3752,14 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">u&#39;赵钱孙李周吴郑王&#39;</span>
 <span class="n">s</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">random</span>
+<span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
@@ -3723,10 +3778,11 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
+吴
+赵
 王
 孙
-周
-郑
+赵
 赵
 
 </pre>
@@ -3740,7 +3796,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">u&#39;赵钱孙李周吴郑王&#39;</span>
@@ -3748,6 +3804,7 @@ None
 
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
 <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
 <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
 <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
@@ -3766,11 +3823,12 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-李
-郑
-赵
-孙
 钱
+孙
+赵
+吴
+郑
+李
 
 </pre>
 </div>
@@ -3840,7 +3898,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>cat /etc/rc.local
@@ -3882,7 +3940,7 @@ exit 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>grep -v ^# /etc/rc.local <span class="p">|</span> wc -l
@@ -3912,7 +3970,7 @@ exit 0
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># grep -v ^# file | wc -l</span>
@@ -3932,7 +3990,7 @@ exit 0
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[69]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[71]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3950,16 +4008,16 @@ exit 0
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">codecs</span>
+<span class="kn">import</span> <span class="nn">io</span>
 
 <span class="n">r</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;^#&#39;</span><span class="p">)</span>
-<span class="c1"># 在python2下无需使用codecs。</span>
+<span class="c1"># 在python2下无需考虑编码。</span>
 <span class="c1"># python3下由于re需要处理string而非bytes，因此需要对输入做转码。</span>
-<span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/etc/rc.local&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fi</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">io</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/etc/rc.local&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fi</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">([</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fi</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">)]))</span>
 </pre></div>
 
@@ -4014,7 +4072,7 @@ exit 0
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
@@ -4060,7 +4118,7 @@ OK
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[71]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[73]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -4098,7 +4156,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -4136,7 +4194,7 @@ OK
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestUrl</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
@@ -4168,7 +4226,7 @@ OK
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
@@ -4196,12 +4254,12 @@ OK
 FAIL: test_wrong (__main__.TestInetAddr)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File &quot;&lt;ipython-input-72-ea312ac19d96&gt;&quot;, line 25, in test_wrong
+  File &quot;&lt;ipython-input-74-ea312ac19d96&gt;&quot;, line 25, in test_wrong
     self.assertFalse(self.r.match(&apos;192.168.0.999&apos;))
-AssertionError: &lt;_sre.SRE_Match object at 0x7f78ed6b0648&gt; is not false
+AssertionError: &lt;_sre.SRE_Match object at 0x7f9a080c5850&gt; is not false
 
 ----------------------------------------------------------------------
-Ran 9 tests in 0.002s
+Ran 9 tests in 0.003s
 
 FAILED (failures=1)
 
@@ -4209,7 +4267,7 @@ FAILED (failures=1)
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[74]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[76]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -4289,7 +4347,7 @@ FAILED (failures=1)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
@@ -4331,7 +4389,7 @@ FAILED (failures=1)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_last_op</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
@@ -4374,7 +4432,7 @@ FAILED (failures=1)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">exp</span><span class="p">):</span>
@@ -4657,7 +4715,7 @@ FAILED (failures=1)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> <span class="n">calc</span><span class="o">.</span><span class="n">py</span>
@@ -4755,7 +4813,7 @@ Writing calc.py
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>pylint calc.py <span class="p">|</span> head -n <span class="m">10</span>
@@ -4793,7 +4851,7 @@ C: 13, 0: Wrong continued indentation (add 6 spaces).
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>pylint calc.py <span class="p">|</span> tail -n <span class="m">5</span>
@@ -4827,7 +4885,7 @@ Your code has been rated at 4.00/10 (previous run: 4.00/10, +0.00)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>flake8 calc.py
@@ -4877,7 +4935,7 @@ calc.py:68:34: W292 no newline at end of file
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>python3 -m mccabe calc.py
@@ -4895,9 +4953,9 @@ calc.py:68:34: W292 no newline at end of file
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 21:1: &apos;parser_exp&apos; 5
-62:1: &apos;calc&apos; 1
 31:1: &apos;find_last_op&apos; 3
 43:1: &apos;eval_exp&apos; 8
+62:1: &apos;calc&apos; 1
 35:1: &apos;force_stack&apos; 1
 
 </pre>
@@ -4911,7 +4969,7 @@ calc.py:68:34: W292 no newline at end of file
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> <span class="n">calc</span><span class="o">.</span><span class="n">py</span>
@@ -5032,7 +5090,7 @@ Overwriting calc.py
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>pylint calc.py <span class="p">|</span> head -n <span class="m">10</span>
@@ -5070,7 +5128,7 @@ C: 46, 8: Invalid variable name &quot;e&quot; (invalid-name)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>pylint calc.py <span class="p">|</span> tail -n <span class="m">5</span>
@@ -5104,7 +5162,7 @@ Your code has been rated at 7.36/10 (previous run: 7.36/10, +0.00)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>flake8 calc.py
@@ -5133,7 +5191,7 @@ calc.py:91:34: W292 no newline at end of file
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>flake8 --max-complexity <span class="m">10</span> calc.py
@@ -5174,7 +5232,7 @@ calc.py:91:34: W292 no newline at end of file
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>python-coverage run calc.py
@@ -5214,7 +5272,7 @@ calc.py:91:34: W292 no newline at end of file
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>python-coverage report -m
@@ -5246,7 +5304,7 @@ calc.py      54      0   100%
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>rm -f calc.py
