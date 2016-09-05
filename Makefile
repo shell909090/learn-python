@@ -7,7 +7,9 @@
 
 all: build
 
-build:
-	ipython nbconvert --to slides --reveal-prefix "http://cdn.jsdelivr.net/reveal.js/2.6.2" '101 - Python入门.ipynb'
+%.slides.html: %ipynb
+	ipython nbconvert --to slides --reveal-prefix "http://cdn.jsdelivr.net/reveal.js/2.6.2" $<
+
+build: '101 - Python入门.slides.html' '102 - Python进阶.slides.html'
 
 ### Makefile ends here
