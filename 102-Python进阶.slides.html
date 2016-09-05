@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>102 - Python进阶 slides</title>
+<title>102-Python进阶 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -229,7 +229,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python进阶">Python进阶</h1>
+<h1 id="python-">Python进阶</h1>
 </div>
 </div>
 </div></section><section>
@@ -253,7 +253,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="高阶语法技巧">高阶语法技巧</h1>
+<h1 id="-">高阶语法技巧</h1>
 </div>
 </div>
 </div></section><section>
@@ -263,7 +263,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="按名称传递参数">按名称传递参数</h2>
+<h2 id="-">按名称传递参数</h2>
 <p>函数除了可以按照顺序传递参数，还可以按照名称传递参数。</p>
 <p>这可以有效解决我们在“默认参数”一节提到过的问题。</p>
 <p>即函数大量参数有默认值，导致想在某个参数上传递一个不同的值，需要将前面的参数默认值全部传递一遍的窘境。</p>
@@ -276,7 +276,9 @@ div.output_prompt {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;a is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;and b is&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;and c is&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 
 <span class="n">func</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
@@ -295,9 +297,9 @@ div.output_prompt {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-(&apos;a is&apos;, 3, &apos;and b is&apos;, 7, &apos;and c is&apos;, 10)
-(&apos;a is&apos;, 25, &apos;and b is&apos;, 5, &apos;and c is&apos;, 24)
-(&apos;a is&apos;, 100, &apos;and b is&apos;, 5, &apos;and c is&apos;, 50)
+a is 3 and b is 7 and c is 10
+a is 25 and b is 5 and c is 24
+a is 100 and b is 5 and c is 50
 
 </pre>
 </div>
@@ -313,9 +315,9 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="混合多种传递方式">混合多种传递方式</h2>
+<h2 id="-">混合多种传递方式</h2>
 <p>一般而言，比较容易理解的次序是：</p>
-<ol style="list-style-type: decimal">
+<ol>
 <li>有按顺序传递的值，就从左向右接收数据。</li>
 <li>没有按顺序传递的值，就按名传递。</li>
 <li>找不到名字的，报错。这个名字已经按顺序传递过了的，报错。</li>
@@ -346,7 +348,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="可变参数">可变参数</h2>
+<h2 id="-">可变参数</h2>
 <p>有时我们需要接收不确定长度个参数。例如sum函数。</p>
 <p>或者是出于某种理由，不想处理用户的所有输入。</p>
 <p>这时我们可以用可变参数来接收或传递参数。</p>
@@ -477,8 +479,8 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习">练习</h2>
-<ol style="list-style-type: decimal">
+<h2 id="-">练习</h2>
+<ol>
 <li>查阅subprocess.Popen，写出执行一个子程序的写法。（不需要后续配合，只需要写出Popen的调用方法）</li>
 <li>写出需要改变执行目录的写法。</li>
 <li>如果你的调用在一个函数内，这个函数需要对外暴露一些Popen的细节。例如由外层来决定是否close_fds等。请写出你认为合适的写法。</li>
@@ -492,7 +494,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="第一类函数对象">第一类函数对象</h2>
+<h2 id="-">第一类函数对象</h2>
 <p>什么叫做“第一类”？</p>
 <p>就是“一等公民”的意思。在使用上和其他值一样，没有任何区别和歧视。</p>
 <p>第一类函数对象的意思就是，函数对象在使用上和其他对象一样。</p>
@@ -543,7 +545,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="闭包">闭包</h2>
+<h2 id="-">闭包</h2>
 <p>python的作用域基本原则是，内层可以访问外层变量，外层不能访问内层。在两层的时候，只有局部和全局。</p>
 <p>但是如果考虑在函数内可以定义函数，而且被定义出来的函数还可以作为结果值返回。</p>
 <p>那么这个“在内层定义的函数”，除了访问自己的局部变量和全部变量外，是否可以访问定义他的函数的“局部变量”呢？</p>
@@ -593,7 +595,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="闭包的本质">闭包的本质</h2>
+<h2 id="-">闭包的本质</h2>
 <p>正常来说，局部变量在函数结束时消亡。</p>
 <p>然而如果在内层嵌套函数中需要访问的话，那么函数结束时局部变量也不能消亡，否则内层函数去访问什么呢？</p>
 <p>带有闭包的函数，局部变量会被附带在刚刚生成函数上，随着这个函数对象的消亡而消亡。</p>
@@ -607,7 +609,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="闭包和类的比较">闭包和类的比较</h2>
+<h2 id="-">闭包和类的比较</h2>
 <p>闭包是带数据的方法，类是带方法的数据，两者非常类似。可以选用简单的那个。</p>
 <p>在需要暴露内部数据，数据附带的方法比较复杂时，建议选用类。反之，可以选用闭包。</p>
 </div>
@@ -743,7 +745,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="装饰器">装饰器</h2>
+<h2 id="-">装饰器</h2>
 <p>装饰器方法允许你重写某个函数的执行过程，在实际函数执行前后执行一些自己的辅助代码。</p>
 <p>从而允许你将部分功能附加在其他函数上。或者运用这种手法对函数的共同行为进行剥离。</p>
 <p>这种重写过程，可以用闭包或类来实现。</p>
@@ -756,11 +758,13 @@ div.output_prompt {
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">print_arg</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="k">class</span> <span class="nc">print_arg</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">f</span>
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{0}, {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">kw</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">kw</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
@@ -781,7 +785,7 @@ div.output_prompt {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-(10, 20), {}
+(10, 20) {}
 30
 
 </pre>
@@ -800,7 +804,7 @@ div.output_prompt {
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_arg</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{0}, {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">kw</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">kw</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">inner</span>
 
@@ -822,7 +826,7 @@ div.output_prompt {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-(10, 20), {}
+(10, 20) {}
 30
 
 </pre>
@@ -839,7 +843,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="装饰器语法糖">装饰器语法糖</h2>
+<h2 id="-">装饰器语法糖</h2>
 <p>由于装饰器在python中经常使用，因此python定义了专门的语法来方便使用。</p>
 </div>
 </div>
@@ -867,7 +871,7 @@ div.output_prompt {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-(10, 20), {}
+(10, 20) {}
 30
 
 </pre>
@@ -884,7 +888,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习1">练习1</h2>
+<h2 id="-1">练习1</h2>
 <p>fib计算函数的运算很慢，因为fib在计算某个参数时，会重复执行很多次更低值的计算。</p>
 <p>请设计一个装饰器，加速这个执行过程。并对比在加和不加这个装饰器下的效率。</p>
 </div>
@@ -913,8 +917,8 @@ div.output_prompt {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-CPU times: user 3.19 s, sys: 8 ms, total: 3.2 s
-Wall time: 3.14 s
+CPU times: user 3.37 s, sys: 20 ms, total: 3.39 s
+Wall time: 3.35 s
 
 </pre>
 </div>
@@ -941,7 +945,7 @@ Wall time: 3.14 s
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
@@ -978,7 +982,7 @@ Wall time: 3.14 s
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 CPU times: user 0 ns, sys: 0 ns, total: 0 ns
-Wall time: 50.1 µs
+Wall time: 51 µs
 
 </pre>
 </div>
@@ -1005,7 +1009,7 @@ Wall time: 50.1 µs
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习2">练习2</h2>
+<h2 id="-2">练习2</h2>
 <p>请考虑上述装饰器是否能用于其他函数。</p>
 <p>如果不能，请修改上述装饰器，使其能够用于其他函数。并说明其适用范围。</p>
 </div>
@@ -1017,7 +1021,7 @@ Wall time: 50.1 µs
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
@@ -1054,7 +1058,7 @@ Wall time: 50.1 µs
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 CPU times: user 0 ns, sys: 0 ns, total: 0 ns
-Wall time: 57.9 µs
+Wall time: 62.2 µs
 
 </pre>
 </div>
@@ -1081,7 +1085,7 @@ Wall time: 57.9 µs
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="生成器">生成器</h2>
+<h2 id="-">生成器</h2>
 <p>在python中，我们时常需要生成一个非常大的序列数据并返回。例如帖子的列表，用户的ID，等等。</p>
 <p>正常我们都是获得数据并生成一个list返回。但是很多时候，这个序列数据是近乎于无限的。</p>
 <p>从性能角度来说，我希望使用一个计算一个，不需要为了全部列表而耗费资源。</p>
@@ -1138,8 +1142,7 @@ Wall time: 57.9 µs
 </div>
 </div>
 
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
@@ -1166,7 +1169,7 @@ Wall time: 57.9 µs
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;generator object fib_seq at 0x7f75a1924f00&gt;
+&lt;generator object fib_seq at 0x7f78fbc3e8c0&gt;
 [2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711]
 
 </pre>
@@ -1183,7 +1186,7 @@ Wall time: 57.9 µs
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="无限生成器">无限生成器</h2>
+<h2 id="-">无限生成器</h2>
 <p>既然生成器机制允许我们一个个获得数据，那么我们定义一个“无限长”的list也是可以的。</p>
 <p>只要不真的去使用所有数据，就不会产生死循环。</p>
 </div>
@@ -1314,7 +1317,7 @@ Wall time: 57.9 µs
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="mapfilterreduce">map/filter/reduce</h2>
+<h2 id="map-filter-reduce">map/filter/reduce</h2>
 <ul>
 <li>map: 从一个列表映射到另一个列表</li>
 <li>filter: 从列表中选择符合条件的</li>
@@ -1329,7 +1332,8 @@ Wall time: 57.9 µs
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)))</span>
+<div class="highlight"><pre><span></span><span class="c1"># python2下无需list，但是python3下map返回生成器</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">))))</span>
 </pre></div>
 
 </div>
@@ -1358,7 +1362,8 @@ Wall time: 57.9 µs
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><span class="c1"># python2下无需list，但是python3下filter返回生成器</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">))))</span>
 </pre></div>
 
 </div>
@@ -1369,15 +1374,13 @@ Wall time: 57.9 µs
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
-
-
-<div class="output_text output_subarea output_pyout">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>
 [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
 </pre>
 </div>
-
 </div>
 
 </div>
@@ -1389,7 +1392,10 @@ Wall time: 57.9 µs
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="nb">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><span class="c1"># 在python2下，无需import。</span>
+<span class="c1"># python3中，reduce已经被从全局命名空间中移除了，所以需要import。</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+<span class="nb">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -1421,7 +1427,7 @@ Wall time: 57.9 µs
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="mapfilter列表推导式和for循环的比较">map/filter，列表推导式和for循环的比较</h2>
+<h2 id="map-filter-for-">map/filter，列表推导式和for循环的比较</h2>
 <p>三者都可以完成对list操作的特定功能，例如筛选出其中某些值，将其中的值转换为另一个值。但是三者在便利程度和使用细节上略有不同。</p>
 <p>map/filter和列表推导式比较间断，适用于相对不是很复杂的情况。真正复杂的情况需要用for来展开。</p>
 <p>map/filter和列表推导式基本假定是“运算不彼此干扰”。即运算某个元素时，不受到其他元素的影响。for没有这一假定，某元素运算时可以受到另一个元素影响。</p>
@@ -1570,7 +1576,7 @@ Wall time: 57.9 µs
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="例子-计算器">例子: 计算器</h2>
+<h2 id="-">例子: 计算器</h2>
 <p>写一个计算器，能够计算简单的加减乘除。（不考虑优先级）</p>
 </div>
 </div>
@@ -1581,7 +1587,7 @@ Wall time: 57.9 µs
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
@@ -1609,13 +1615,41 @@ Wall time: 57.9 µs
     <span class="k">if</span> <span class="n">s</span><span class="p">:</span> <span class="k">yield</span> <span class="n">s</span>
 
 <span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">parser_exp</span><span class="p">(</span><span class="s1">&#39;1+2&#39;</span><span class="p">)))</span>
+</pre></div>
 
-<span class="k">def</span> <span class="nf">eval_exp</span><span class="p">(</span><span class="n">exp</span><span class="p">):</span>
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+[&apos;1&apos;, &apos;+&apos;, &apos;2&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">eval_exp</span><span class="p">(</span><span class="n">exp</span><span class="p">):</span>
     <span class="n">num</span> <span class="o">=</span> <span class="bp">None</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">parser_exp</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">op_set</span><span class="p">:</span>
-            <span class="n">r</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">next</span><span class="p">())</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
             <span class="n">num</span> <span class="o">=</span> <span class="n">op_set</span><span class="p">[</span><span class="n">e</span><span class="p">](</span><span class="n">num</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">num</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
@@ -1636,7 +1670,6 @@ Wall time: 57.9 µs
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-[&apos;1&apos;, &apos;+&apos;, &apos;2&apos;]
 7.0
 9.0
 
@@ -1656,7 +1689,7 @@ Wall time: 57.9 µs
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="语法范式">语法范式</h1>
+<h1 id="-">语法范式</h1>
 </div>
 </div>
 </div></section><section>
@@ -1666,7 +1699,7 @@ Wall time: 57.9 µs
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="引用和复制">引用和复制</h2>
+<h2 id="-">引用和复制</h2>
 <p>在Python中，要分清“可变对象”和“不可变对象”。以及“对象引用”和“对象复制”。</p>
 <p>对不可变对象而言，引用和复制并没有太大区别——反正弄来弄去都是同一个对象。</p>
 <p>而对于可变对象，对于引用的修改会同时作用于原始对象。对复制的修改并不影响原始对象。</p>
@@ -1676,10 +1709,12 @@ Wall time: 57.9 µs
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Simple Assignment&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Simple Assignment&#39;</span><span class="p">)</span>
 <span class="n">shoplist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="p">,</span> <span class="s1">&#39;carrot&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">]</span>
 <span class="n">mylist</span> <span class="o">=</span> <span class="n">shoplist</span>
 
@@ -1706,11 +1741,11 @@ Wall time: 57.9 µs
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 Simple Assignment
-(&apos;shoplist is&apos;, [&apos;mango&apos;, &apos;carrot&apos;, &apos;banana&apos;])
-(&apos;mylist is&apos;, [&apos;mango&apos;, &apos;carrot&apos;, &apos;banana&apos;])
+shoplist is [&apos;mango&apos;, &apos;carrot&apos;, &apos;banana&apos;]
+mylist is [&apos;mango&apos;, &apos;carrot&apos;, &apos;banana&apos;]
 Copy by making a full slice
-(&apos;shoplist is&apos;, [&apos;mango&apos;, &apos;carrot&apos;, &apos;banana&apos;])
-(&apos;mylist is&apos;, [&apos;carrot&apos;, &apos;banana&apos;])
+shoplist is [&apos;mango&apos;, &apos;carrot&apos;, &apos;banana&apos;]
+mylist is [&apos;carrot&apos;, &apos;banana&apos;]
 
 </pre>
 </div>
@@ -1726,7 +1761,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="浅拷贝和深拷贝">浅拷贝和深拷贝</h2>
+<h2 id="-">浅拷贝和深拷贝</h2>
 <p>可变对象的拷贝是一件耗时而重要的工作。</p>
 <p>那么，如果在可变对象内有另一个可变对象呢？例如在list里嵌套了list？</p>
 <p>只对原始的list进行复制的行为，叫做浅拷贝。对多层对象进行拷贝的行为，叫做深拷贝。</p>
@@ -1736,10 +1771,11 @@ Copy by making a full slice
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">copy</span>
 
 <span class="n">orig_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
 
@@ -1793,7 +1829,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习1">练习1</h2>
+<h2 id="-1">练习1</h2>
 <p>编写一个函数，将输入列表反序输出。</p>
 <p>禁止用系统反向函数，例如reversed和list.reverse。</p>
 </div>
@@ -1805,13 +1841,13 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -1850,7 +1886,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习2">练习2</h2>
+<h2 id="-2">练习2</h2>
 <p>修改上面的函数，将输入列表就地反序，不产生输出。</p>
 </div>
 </div>
@@ -1861,13 +1897,13 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -1909,7 +1945,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习3">练习3</h2>
+<h2 id="-3">练习3</h2>
 <p>构造一颗自循环二叉树。</p>
 </div>
 </div>
@@ -1920,13 +1956,13 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1962,7 +1998,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习4">练习4</h2>
+<h2 id="-4">练习4</h2>
 <p>思考一下，如果只用tuple，是否能够完成自循环树的构造。</p>
 </div>
 </div>
@@ -1973,7 +2009,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="多层yield范式">多层yield范式</h2>
+<h2 id="-yield-">多层yield范式</h2>
 <p>前面我们说过，对于list的处理常常可以归结为map/filter模式，而对于map/filter的复杂操作往往最好使用for来展开。</p>
 <p>但是实际工作中，我们常常会发现，我们需要对list进行复杂处理，每层处理都需要用for。</p>
 <p>而且每层处理都是可选的，总体处理过程需要根据条件进行拼装。</p>
@@ -1992,7 +2028,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="设计原则">设计原则</h1>
+<h1 id="-">设计原则</h1>
 </div>
 </div>
 </div></section><section>
@@ -2002,7 +2038,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="面对对象程序设计原则">面对对象程序设计原则</h2>
+<h2 id="-">面对对象程序设计原则</h2>
 <ul>
 <li>单一功能原则：一个对象应该仅具有一类特定功能。不要试图在上面做太多的功能。</li>
 <li>开闭原则：软件体对于扩展是开放的，对于修改是封闭的。简单思考一下，如果你的代码提交后只能追加文件和修改最少的行数，如何设计？</li>
@@ -2019,7 +2055,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习1">练习1</h2>
+<h2 id="-1">练习1</h2>
 <p>定义一些类，描述平行四边形，矩形，正方形。并按照你的理解实现继承关系。</p>
 <p>不用实现方法和属性。</p>
 </div>
@@ -2031,7 +2067,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习2">练习2</h2>
+<h2 id="-2">练习2</h2>
 <p>为刚刚的“平行四边形”，“矩形”，“正方形”类，添加以下属性和方法：</p>
 <ul>
 <li>属性：夹角，边长</li>
@@ -2046,7 +2082,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习3">练习3</h2>
+<h2 id="-3">练习3</h2>
 <p>考虑一下，刚刚你实现的类中，“设定夹角”方法，对于“长方形”和“正方形”是一个合理的方法么？</p>
 <p>思考一下，哪个原则错了？</p>
 <ul>
@@ -2062,7 +2098,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习4">练习4</h2>
+<h2 id="-4">练习4</h2>
 <p>增加一个用于计算面积的函数，考虑是否可以复用呢？</p>
 </div>
 </div>
@@ -2073,7 +2109,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习5">练习5</h2>
+<h2 id="-5">练习5</h2>
 <p>现在实现一个方法，判断两个对象是否相等。</p>
 </div>
 </div>
@@ -2084,7 +2120,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="python程序设计原则">Python程序设计原则</h2>
+<h2 id="python-">Python程序设计原则</h2>
 <ul>
 <li>Duck typing</li>
 <li>最小惊讶原则</li>
@@ -2113,7 +2149,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="字符编码">字符编码</h1>
+<h1 id="-">字符编码</h1>
 </div>
 </div>
 </div></section><section>
@@ -2123,7 +2159,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="字符集">字符集</h2>
+<h2 id="-">字符集</h2>
 <ul>
 <li>GB2312：GB 2312-80，1981年5月1日，6763个字。</li>
 <li>GBK：1995年12月15日，21003个字。</li>
@@ -2152,7 +2188,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="编码方案">编码方案</h2>
+<h2 id="-">编码方案</h2>
 <p>编码方案基本分为两类：变长和定长。</p>
 <ul>
 <li>GB2312/GBK使用变长编码。单字编码长度1-2字节。</li>
@@ -2181,7 +2217,7 @@ Copy by making a full slice
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="兼容性">兼容性</h2>
+<h2 id="-">兼容性</h2>
 <p>字符集兼容性：GB18030下行兼容GBK，GBK下行兼容GB2312。GB18030兼容Unicode3.1中日韩表意文字区。</p>
 <p>编码兼容性：UCS-2/UCS-4互相不兼容。UTF-8独立。GB18030的编码方式下行兼容GB2312/GBK。除了UCS-2/UCS-4以外，都兼容ascii。</p>
 </div>
@@ -2210,10 +2246,10 @@ Copy by making a full slice
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="s2">&quot;hello world&quot;</span>
+<div class="highlight"><pre><span></span><span class="n">b</span><span class="s2">&quot;hello world&quot;</span>
 </pre></div>
 
 </div>
@@ -2224,7 +2260,7 @@ Copy by making a full slice
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[34]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[35]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2241,10 +2277,10 @@ Copy by making a full slice
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2255,7 +2291,7 @@ Copy by making a full slice
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[35]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[36]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2272,7 +2308,7 @@ str
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="s2">u&quot;hello world&quot;</span>
@@ -2286,7 +2322,7 @@ str
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[36]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[37]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2303,7 +2339,7 @@ u&apos;hello world&apos;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s2">u&quot;hello world&quot;</span><span class="p">)</span>
@@ -2317,7 +2353,7 @@ u&apos;hello world&apos;
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[37]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[38]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2355,7 +2391,7 @@ unicode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># encoding=utf-8</span>
@@ -2394,7 +2430,7 @@ unicode
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>ls -l abc.txt
@@ -2411,7 +2447,7 @@ unicode
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 72 9月   2 17:23 abc.txt
+-rw-r--r-- 1 shell shell 72 9月   5 15:44 abc.txt
 
 </pre>
 </div>
@@ -2423,7 +2459,7 @@ unicode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>cat abc.txt
@@ -2452,7 +2488,7 @@ unicode
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># encoding=utf-8</span>
@@ -2495,7 +2531,7 @@ unicode
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">UnicodeDecodeError</span>                        Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-41-d2ca517a40b2&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-42-d2ca517a40b2&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">     12</span> <span class="ansigreen">print</span><span class="ansiblue">(</span>text<span class="ansiblue">)</span><span class="ansiblue"></span>
 <span class="ansigreen">     13</span> <span class="ansiblue"></span>
 <span class="ansigreen">---&gt; 14</span><span class="ansired"> </span>text <span class="ansiblue">=</span> io<span class="ansiblue">.</span>open<span class="ansiblue">(</span><span class="ansiblue">&quot;abc.txt&quot;</span><span class="ansiblue">,</span> encoding<span class="ansiblue">=</span><span class="ansiblue">&quot;utf-8&quot;</span><span class="ansiblue">)</span><span class="ansiblue">.</span>read<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue"></span>
@@ -2519,7 +2555,7 @@ unicode
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>ls -l abc.txt
@@ -2536,7 +2572,7 @@ unicode
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 48 9月   2 17:23 abc.txt
+-rw-r--r-- 1 shell shell 48 9月   5 15:44 abc.txt
 
 </pre>
 </div>
@@ -2548,7 +2584,7 @@ unicode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>cat abc.txt
@@ -2577,7 +2613,7 @@ unicode
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>rm abc.txt
@@ -2595,7 +2631,7 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习">练习</h2>
+<h2 id="-">练习</h2>
 <p>写一个程序，将文件从指定编码转换成指定编码。</p>
 </div>
 </div>
@@ -2606,7 +2642,7 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习可选">练习（可选）</h2>
+<h2 id="-">练习（可选）</h2>
 <p>为上述程序增加猜测编码功能。</p>
 <p>注：本题目需要自行查阅chardet库的文档。这是一个猜测字符串编码的库。</p>
 </div>
@@ -2618,13 +2654,13 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># encoding=utf-8</span>
@@ -2666,7 +2702,7 @@ unicode
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># encoding=utf-8</span>
@@ -2713,7 +2749,7 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="正则表达式入门">正则表达式入门</h1>
+<h1 id="-">正则表达式入门</h1>
 <p>如果需要将一系列内容表述成文字，我们可以很方便的使用format来达成这一目标。</p>
 <p>然而如果是表达完成的文字解析为内容（例如int）呢？format是否有一个反操作，能让我们方便的解析内容。</p>
 <p>当然，最傻的办法就是手写文字解析器。时间成本巨大，而且可变性很差。</p>
@@ -2729,7 +2765,7 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="从和说起">从*和?说起</h2>
+<h2 id="-">从*和?说起</h2>
 <p>在搜索文件时，我们经常会用*和?表示适配一个或多个字符。</p>
 <p>正则的思路和这个类似，但是更加复杂一些。他不但能表示匹配一个或多个字符，而且还能限定匹配哪个或者哪些字符，匹配多少。</p>
 </div>
@@ -2741,15 +2777,15 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="匹配规则">匹配规则</h2>
+<h2 id="-">匹配规则</h2>
 <ul>
-<li>. 匹配除换行符以外的任意字符</li>
-<li>匹配字母或数字或下划线或汉字</li>
-<li>匹配任意的空白符</li>
-<li>匹配数字</li>
-<li>匹配单词的开始或结束</li>
-<li>^ 匹配字符串的开始</li>
-<li>$ 匹配字符串的结束</li>
+<li>.       匹配除换行符以外的任意字符</li>
+<li>\w      匹配字母或数字或下划线或汉字</li>
+<li>\s      匹配任意的空白符</li>
+<li>\d      匹配数字</li>
+<li>\b      匹配单词的开始或结束</li>
+<li>^       匹配字符串的开始</li>
+<li>$       匹配字符串的结束</li>
 </ul>
 </div>
 </div>
@@ -2760,13 +2796,13 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="重复次数">重复次数</h2>
+<h2 id="-">重复次数</h2>
 <ul>
-<li>* 重复零次或更多次</li>
-<li>+ 重复一次或更多次</li>
-<li>? 重复零次或一次</li>
-<li>{n} 重复n次</li>
-<li>{n,} 重复n次或更多次</li>
+<li>*        重复零次或更多次</li>
+<li>+       重复一次或更多次</li>
+<li>?       重复零次或一次</li>
+<li>{n}     重复n次</li>
+<li>{n,}    重复n次或更多次</li>
 <li>{n,m} 重复n到m次</li>
 </ul>
 </div>
@@ -2778,10 +2814,10 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="例子">例子</h2>
+<h2 id="-">例子</h2>
 <p>He was carefully disguised but captured quickly by police.</p>
-<p>+ly</p>
-<p>'carefully', 'quickly'</p>
+<p>\w+ly</p>
+<p>&#39;carefully&#39;, &#39;quickly&#39;</p>
 </div>
 </div>
 </div></section><section>
@@ -2791,7 +2827,7 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="字符范围">字符范围</h2>
+<h2 id="-">字符范围</h2>
 <p>可以用[...]的语法来匹配自定义内容，例如[a-z0-9]*，表示小写或数字重复任意次。</p>
 <p>可以用^表示求反，除去这个字符不匹配。</p>
 </div>
@@ -2803,7 +2839,7 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="捕获">捕获</h2>
+<h2 id="-">捕获</h2>
 <p>在正则表达式中，可以用(...)的语法表示捕获部分内容。</p>
 <p>例如([^/]*)，表示匹配直到/之前的所有内容，并且捕获。</p>
 <p>被捕获的内容可以后续使用（例如用于内容替换，像sed），或者在一次匹配中或的多个内容（例如在re库中使用groups，后面会讲）。</p>
@@ -2816,7 +2852,7 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="非贪婪匹配">非贪婪匹配</h2>
+<h2 id="-">非贪婪匹配</h2>
 <p>常规来说，正则会匹配“尽量长”的字符。例如我们用(h.*o)，试图匹配hello, fox中的hello。但是实际结果是hello, fo。</p>
 <p>可以在匹配规则后面加?，表示非贪婪匹配。</p>
 <p>此时正则会尽力匹配“尽量短”的字符。例如(h.*?o)去匹配hello, fox，此时得到hello。</p>
@@ -2829,7 +2865,7 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="其他材料">其他材料</h2>
+<h2 id="-">其他材料</h2>
 <p><a href="http://deerchao.net/tutorials/regex/regex.htm">正则表达式30分钟入门教程</a></p>
 </div>
 </div>
@@ -2840,7 +2876,7 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习">练习</h2>
+<h2 id="-">练习</h2>
 <p>写出一个正则表达式，匹配手机号码。</p>
 <p>写出一个正则表达式，匹配ipv4地址。</p>
 <p>观看下面两个范例，解释逻辑:</p>
@@ -2857,7 +2893,7 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python库示例">Python库示例</h1>
+<h1 id="python-">Python库示例</h1>
 </div>
 </div>
 </div></section><section>
@@ -2867,18 +2903,18 @@ unicode
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="标准库sys">标准库:sys</h2>
+<h2 id="-sys">标准库:sys</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="k">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span>
-<span class="k">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="o">.</span><span class="n">major</span> <span class="o">==</span> <span class="mi">3</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="o">.</span><span class="n">major</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2909,16 +2945,18 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="标准库logging">标准库:logging</h2>
+<h2 id="-logging">标准库:logging</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">platform</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 
@@ -2962,7 +3000,7 @@ WARNING:root:Dying now
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-(&apos;Logging to&apos;, &apos;/home/shell/test.log&apos;)
+Logging to /home/shell/test.log
 
 </pre>
 </div>
@@ -2994,7 +3032,7 @@ WARNING:root:Dying now
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -3012,7 +3050,7 @@ WARNING:root:Dying now
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[49]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3033,7 +3071,7 @@ WARNING:root:Dying now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="search和match的区别">search和match的区别</h2>
+<h2 id="search-match-">search和match的区别</h2>
 <p>match一定从字符串的头开始匹配，search搜索全部文本。search即使用了^，也可能匹配到一个新行。</p>
 <p>因此，要匹配头部，或者整个完整字符串，需要用match。而要在文字中搜索，需要用search。</p>
 <p>细节：从复杂性上看，理所当然的，match更快。</p>
@@ -3046,7 +3084,7 @@ WARNING:root:Dying now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习">练习</h2>
+<h2 id="-">练习</h2>
 <p>请写程序验证在“正则表达式”一节中所写的那些正则。</p>
 </div>
 </div>
@@ -3057,13 +3095,13 @@ WARNING:root:Dying now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -3084,7 +3122,7 @@ WARNING:root:Dying now
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;_sre.SRE_Match object at 0x7f7598107100&gt;
+&lt;_sre.SRE_Match object at 0x7f78ed6d4780&gt;
 None
 
 </pre>
@@ -3098,7 +3136,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -3122,10 +3160,10 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;_sre.SRE_Match object at 0x7f7598107168&gt;
+&lt;_sre.SRE_Match object at 0x7f78ed6d47e8&gt;
 None
 None
-&lt;_sre.SRE_Match object at 0x7f7598107168&gt;
+&lt;_sre.SRE_Match object at 0x7f78ed6d47e8&gt;
 
 </pre>
 </div>
@@ -3138,7 +3176,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -3160,7 +3198,7 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;_sre.SRE_Match object at 0x7f759c3f7160&gt;
+&lt;_sre.SRE_Match object at 0x7f78fbbfa458&gt;
 None
 
 </pre>
@@ -3174,7 +3212,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -3196,7 +3234,7 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;_sre.SRE_Match object at 0x7f759c7c5458&gt;
+&lt;_sre.SRE_Match object at 0x7f78fbbfa6b8&gt;
 None
 
 </pre>
@@ -3219,7 +3257,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
@@ -3257,7 +3295,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>ls -l shoplist.data
@@ -3274,7 +3312,7 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 46 9月   2 17:23 shoplist.data
+-rw-r--r-- 1 shell shell 46 9月   5 15:44 shoplist.data
 
 </pre>
 </div>
@@ -3287,7 +3325,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>rm shoplist.data
@@ -3321,7 +3359,7 @@ None
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习">练习</h2>
+<h2 id="-">练习</h2>
 <p>不要写任何代码，求出攻占攻占巴士底狱发生在周几？</p>
 <p>提示：攻占巴士底狱发生在西历1789年7月14日。</p>
 </div>
@@ -3333,13 +3371,13 @@ None
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
@@ -3388,7 +3426,7 @@ None
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习">练习</h2>
+<h2 id="-">练习</h2>
 <p>算出2**15有多少位数。2**11515呢？2**115151515呢？</p>
 </div>
 </div>
@@ -3399,13 +3437,13 @@ None
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">15</span>
@@ -3419,7 +3457,7 @@ None
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[58]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[59]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3436,7 +3474,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">15</span><span class="p">))</span>
@@ -3450,7 +3488,7 @@ None
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[59]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[60]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3467,7 +3505,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">1515</span>
@@ -3481,7 +3519,7 @@ None
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[60]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3498,7 +3536,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">1515</span><span class="p">))</span>
@@ -3512,7 +3550,7 @@ None
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[62]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3530,7 +3568,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># log(2**15151515) == log2 * 15151515 == log10 * (log2/log10) * 15151515</span>
@@ -3576,7 +3614,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -3632,7 +3670,7 @@ None
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习">练习</h2>
+<h2 id="-">练习</h2>
 <p>做一个抽奖程序</p>
 </div>
 </div>
@@ -3654,13 +3692,13 @@ None
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">u&#39;赵钱孙李周吴郑王&#39;</span>
@@ -3685,11 +3723,11 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-吴
-赵
+王
 孙
-李
-李
+周
+郑
+赵
 
 </pre>
 </div>
@@ -3702,7 +3740,7 @@ None
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">u&#39;赵钱孙李周吴郑王&#39;</span>
@@ -3728,10 +3766,10 @@ None
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
+李
 郑
+赵
 孙
-吴
-王
 钱
 
 </pre>
@@ -3783,7 +3821,7 @@ None
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习">练习</h2>
+<h2 id="-">练习</h2>
 <p>完成<code>grep -v ^# file | wc -l</code>的功能，注意不能用shell调用。</p>
 <p>用python代码完成上述功能。</p>
 <p>注意： windows的同学无法做grep和wc，所以这道题目只能用python代码完成这部分功能。</p>
@@ -3796,13 +3834,13 @@ None
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>cat /etc/rc.local
@@ -3844,7 +3882,7 @@ exit 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>grep -v ^# /etc/rc.local <span class="p">|</span> wc -l
@@ -3874,7 +3912,7 @@ exit 0
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># grep -v ^# file | wc -l</span>
@@ -3894,7 +3932,7 @@ exit 0
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[68]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[69]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3912,13 +3950,16 @@ exit 0
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">codecs</span>
 
 <span class="n">r</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;^#&#39;</span><span class="p">)</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/etc/rc.local&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fi</span><span class="p">:</span>
+<span class="c1"># 在python2下无需使用codecs。</span>
+<span class="c1"># python3下由于re需要处理string而非bytes，因此需要对输入做转码。</span>
+<span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/etc/rc.local&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fi</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">([</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fi</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">)]))</span>
 </pre></div>
 
@@ -3973,7 +4014,7 @@ exit 0
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
@@ -4019,7 +4060,7 @@ OK
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[70]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[71]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -4040,7 +4081,7 @@ OK
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="练习">练习</h2>
+<h2 id="-">练习</h2>
 <p>针对“正则表达式”一节中的表达式，建立正向和反向用例，检验其正确性。</p>
 </div>
 </div>
@@ -4051,13 +4092,13 @@ OK
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -4083,6 +4124,7 @@ OK
         <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;abc.def.ghi.jkl&#39;</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">test_wrong</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># 这里会报错，这是正常的</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;192.168.0.999&#39;</span><span class="p">))</span>
 </pre></div>
 
@@ -4094,7 +4136,7 @@ OK
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestUrl</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
@@ -4126,7 +4168,7 @@ OK
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
@@ -4154,12 +4196,12 @@ OK
 FAIL: test_wrong (__main__.TestInetAddr)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File &quot;&lt;ipython-input-71-19a306a3d23e&gt;&quot;, line 24, in test_wrong
+  File &quot;&lt;ipython-input-72-ea312ac19d96&gt;&quot;, line 25, in test_wrong
     self.assertFalse(self.r.match(&apos;192.168.0.999&apos;))
-AssertionError: &lt;_sre.SRE_Match object at 0x7f7598142d98&gt; is not false
+AssertionError: &lt;_sre.SRE_Match object at 0x7f78ed6b0648&gt; is not false
 
 ----------------------------------------------------------------------
-Ran 9 tests in 0.006s
+Ran 9 tests in 0.002s
 
 FAILED (failures=1)
 
@@ -4167,7 +4209,7 @@ FAILED (failures=1)
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[71]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[74]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -4190,7 +4232,7 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="复杂例子计算器">复杂例子：计算器</h1>
+<h1 id="-">复杂例子：计算器</h1>
 <p>记得我们上面做过的练习“计算器”么？下面我们要做一个带有优先级和括号处理能力的复杂版本计算器。</p>
 <p>请先思考一下，这类计算器如何做。然后试着实现一下想法。（假定目前只支持双目算符，但是优先级可能超过两个级别）</p>
 </div>
@@ -4241,13 +4283,13 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="答案">答案</h2>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
@@ -4289,7 +4331,7 @@ FAILED (failures=1)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_last_op</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
@@ -4332,7 +4374,7 @@ FAILED (failures=1)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">exp</span><span class="p">):</span>
@@ -4342,6 +4384,7 @@ FAILED (failures=1)
 <span class="k">print</span><span class="p">(</span><span class="n">calc</span><span class="p">(</span><span class="s1">&#39;2*3+1&#39;</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="n">calc</span><span class="p">(</span><span class="s1">&#39;1+2*3&#39;</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="n">calc</span><span class="p">(</span><span class="s1">&#39;(1.1+2.5/10)*3/4+1&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;(1.1+2.5/10)*3/4+1&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -4367,6 +4410,7 @@ FAILED (failures=1)
 / 4.05 4.0 =&gt; 1.0125
 + 1.0125 1.0 =&gt; 2.0125
 2.0125
+2.0125
 
 </pre>
 </div>
@@ -4384,7 +4428,7 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pep8代码规范">pep8代码规范</h1>
+<h1 id="pep8-">pep8代码规范</h1>
 <ul>
 <li>对齐规则</li>
 <li>导入规则</li>
@@ -4403,7 +4447,7 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="对齐规则">对齐规则</h2>
+<h2 id="-">对齐规则</h2>
 <ul>
 <li>使用空格而非tab，除非文件已经使用tab缩进。</li>
 <li>使用4空格缩进。对于跨行而言，4空格缩进是可选的。</li>
@@ -4423,7 +4467,7 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="导入规则">导入规则</h2>
+<h2 id="-">导入规则</h2>
 <ul>
 <li>文件应使用utf-8编码。符号应使用英文（但不排斥拼音）。</li>
 <li>一行import操作一个module，但是from import多个符号是OK的。</li>
@@ -4432,7 +4476,7 @@ FAILED (failures=1)
 <li>应使用绝对import。显式相对导入也是可以接受的。</li>
 <li>泛式import（from import *）应被禁止，因为可能污染命名空间。</li>
 <li>模块级dunders（例如__all__，__version__），应定义在doc string和__future__的后面，但是在import的前面。</li>
-<li>文件的推荐次序依次是Sha-Bang，encoding声明，注释，module doc string，__#future__ import，dunders，import，global和常量定义。</li>
+<li>文件的推荐次序依次是Sha-Bang，encoding声明，注释，module doc string，__future__ import，dunders，import，global和常量定义。</li>
 </ul>
 </div>
 </div>
@@ -4454,19 +4498,25 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="空格规则">空格规则</h2>
+<h2 id="-">空格规则</h2>
 <ul>
-<li>以下情况不应使用空格：</li>
+<li>以下情况不应使用空格：<ul>
 <li>括号，方括号和花括号内部的包围空格。</li>
 <li>冒号，逗号和分号前面的空格。</li>
 <li>函数和参数括号之间，列表和索引之间。</li>
 <li>批量赋值时使用超过一个空格进行对齐。</li>
 <li>行尾的空字符。</li>
-<li>以下情况请务必使用空格：</li>
+</ul>
+</li>
+<li>以下情况请务必使用空格：<ul>
 <li>在赋值，比较，逻辑算符的两侧。</li>
 <li>参数默认值和按名传参中的=两侧不要使用空格。</li>
-<li>以下情况建议使用算符：</li>
+</ul>
+</li>
+<li>以下情况建议使用算符：<ul>
 <li>表达式中优先级最低的算符两侧。</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -4477,7 +4527,7 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="注释规则">注释规则</h2>
+<h2 id="-">注释规则</h2>
 <ul>
 <li>注释和代码不符比没有注释更糟糕。所以注释的有效性应被视为代码正确性的一部分。</li>
 <li>对于非英语作者，请使用英文注释。除非你万分确定代码永远不会被这种语言外的使用者阅读。（否则你的注释就是无用的）</li>
@@ -4496,7 +4546,7 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="命名规则">命名规则</h2>
+<h2 id="-">命名规则</h2>
 <ul>
 <li>永远不要用lIOo单独作为变量名，因为搞不清谁是谁。</li>
 <li>模块建议使用短的，全小写名字。如果有助于阅读，可以用_。包应该始终用短的，小写名字。不鼓励用_。</li>
@@ -4515,7 +4565,7 @@ FAILED (failures=1)
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>函数名建议全小写。如果有助于阅读，可以用_。如果和关键字冲突，一般会改个名字或者在后面加_。</li>
+<li>函数名建议全小写。如果有助于阅读，可以用<em>。如果和关键字冲突，一般会改个名字或者在后面加</em>。</li>
 <li>内部使用的全局变量名规则同函数名。</li>
 <li>始终用self来指代对象本身，使用cls来指代类本身。</li>
 <li>常量始终全大写。</li>
@@ -4530,7 +4580,7 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="异常规则">异常规则</h2>
+<h2 id="-">异常规则</h2>
 <ul>
 <li>从Exception继承异常而不是从BaseException继承。</li>
 <li>谨慎使用异常串。</li>
@@ -4548,7 +4598,7 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="编程细节">编程细节</h2>
+<h2 id="-">编程细节</h2>
 <ul>
 <li>代码应当被编写的尽量不妨碍其他python实现。（例如pypy，etc）所以不要依赖于一些CPython中特定的特性/优化。</li>
 <li>对单例变量（例如True/False/None）的比较应始终使用is/is not，而不是比较算符。</li>
@@ -4584,7 +4634,7 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python工程">Python工程</h1>
+<h1 id="python-">Python工程</h1>
 </div>
 </div>
 </div></section><section>
@@ -4594,7 +4644,7 @@ FAILED (failures=1)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="代码检查工具">代码检查工具</h2>
+<h2 id="-">代码检查工具</h2>
 <ul>
 <li>pylint</li>
 <li>pycodestyle</li>
@@ -4607,7 +4657,7 @@ FAILED (failures=1)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> <span class="n">calc</span><span class="o">.</span><span class="n">py</span>
@@ -4705,7 +4755,7 @@ Writing calc.py
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>pylint calc.py <span class="p">|</span> head -n <span class="m">10</span>
@@ -4743,7 +4793,7 @@ C: 13, 0: Wrong continued indentation (add 6 spaces).
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>pylint calc.py <span class="p">|</span> tail -n <span class="m">5</span>
@@ -4777,7 +4827,7 @@ Your code has been rated at 4.00/10 (previous run: 4.00/10, +0.00)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>flake8 calc.py
@@ -4827,7 +4877,7 @@ calc.py:68:34: W292 no newline at end of file
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>python3 -m mccabe calc.py
@@ -4846,9 +4896,9 @@ calc.py:68:34: W292 no newline at end of file
 <pre>
 21:1: &apos;parser_exp&apos; 5
 62:1: &apos;calc&apos; 1
-35:1: &apos;force_stack&apos; 1
 31:1: &apos;find_last_op&apos; 3
 43:1: &apos;eval_exp&apos; 8
+35:1: &apos;force_stack&apos; 1
 
 </pre>
 </div>
@@ -4861,7 +4911,7 @@ calc.py:68:34: W292 no newline at end of file
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> <span class="n">calc</span><span class="o">.</span><span class="n">py</span>
@@ -4982,7 +5032,7 @@ Overwriting calc.py
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>pylint calc.py <span class="p">|</span> head -n <span class="m">10</span>
@@ -5020,7 +5070,7 @@ C: 46, 8: Invalid variable name &quot;e&quot; (invalid-name)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>pylint calc.py <span class="p">|</span> tail -n <span class="m">5</span>
@@ -5054,7 +5104,7 @@ Your code has been rated at 7.36/10 (previous run: 7.36/10, +0.00)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>flake8 calc.py
@@ -5071,7 +5121,7 @@ Your code has been rated at 7.36/10 (previous run: 7.36/10, +0.00)
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-calc.py:89:34: W292 no newline at end of file
+calc.py:91:34: W292 no newline at end of file
 
 </pre>
 </div>
@@ -5083,7 +5133,7 @@ calc.py:89:34: W292 no newline at end of file
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>flake8 --max-complexity <span class="m">10</span> calc.py
@@ -5100,7 +5150,7 @@ calc.py:89:34: W292 no newline at end of file
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-calc.py:89:34: W292 no newline at end of file
+calc.py:91:34: W292 no newline at end of file
 
 </pre>
 </div>
@@ -5116,7 +5166,7 @@ calc.py:89:34: W292 no newline at end of file
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="覆盖率分析工具">覆盖率分析工具</h2>
+<h2 id="-">覆盖率分析工具</h2>
 <p>coverage</p>
 </div>
 </div>
@@ -5124,7 +5174,7 @@ calc.py:89:34: W292 no newline at end of file
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>python-coverage run calc.py
@@ -5164,7 +5214,7 @@ calc.py:89:34: W292 no newline at end of file
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>python-coverage report -m
@@ -5196,7 +5246,7 @@ calc.py      54      0   100%
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>rm -f calc.py
@@ -5214,7 +5264,7 @@ calc.py      54      0   100%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="文档工具">文档工具</h2>
+<h2 id="-">文档工具</h2>
 <ul>
 <li>pydoc</li>
 <li>doxygen</li>
@@ -5232,7 +5282,7 @@ calc.py      54      0   100%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="编辑器设定">编辑器设定</h1>
+<h1 id="-">编辑器设定</h1>
 </div>
 </div>
 </div></section><section>
@@ -5242,7 +5292,7 @@ calc.py      54      0   100%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="编辑器辅助功能">编辑器辅助功能</h2>
+<h2 id="-">编辑器辅助功能</h2>
 <p>在开发python的时候，有一款好的编辑器往往能很大的提升工作效率。针对python来说，编辑器可能提供的特性有：</p>
 <ul>
 <li>语法高亮</li>
@@ -5262,8 +5312,8 @@ calc.py      54      0   100%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="emacs配置">Emacs配置</h2>
-<p>Emacs的授权是GPLv3。更多细节，可以参考：https://www.emacswiki.org/emacs/PythonProgrammingInEmacs</p>
+<h2 id="emacs-">Emacs配置</h2>
+<p>Emacs的授权是GPLv3。更多细节，可以参考<a href="https://www.emacswiki.org/emacs/PythonProgrammingInEmacs">这里</a></p>
 <p>假定你已经选择了使用emacs作为日常编辑器，懂得如何设定配置文件和安装插件。知道如何切换到python-mode。</p>
 <p>Emacs默认内置了python.el，自动开启了以下功能：</p>
 <ul>
@@ -5283,17 +5333,20 @@ calc.py      54      0   100%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="vim配置">Vim配置</h2>
+<h2 id="vim-">Vim配置</h2>
 <p>Vim是和Emacs并称的强大编辑器。Vim的授权是独特的Vim授权，但是是GPL兼容的。</p>
 <ul>
-<li>语法高亮：下载这个插件 http://www.vim.org/scripts/script.php?script_id=1599 ，放在~/.vim/plugin/。</li>
+<li>语法高亮：下载<a href="http://www.vim.org/scripts/script.php?script_id=1599">这个插件</a>，放在~/.vim/plugin/。</li>
 <li>自动缩进：自动。</li>
 <li>自动补全：Ctrl+n就可以补全。还可以加载pydiction进行补全。</li>
-<li>代码折叠：下载这个插件 http://vim.sourceforge.net/scripts/script.php?script_id=515 ，放在~/.vim/plugin/。zc折叠，zo反折叠。zN折叠所有，zn反折叠所有。</li>
+<li>代码折叠：下载<a href="http://vim.sourceforge.net/scripts/script.php?script_id=515">这个插件</a>，放在~/.vim/plugin/。<ul>
+<li>操作：zc折叠，zo反折叠。zN折叠所有，zn反折叠所有。</li>
+</ul>
+</li>
 <li>符号定位和查找：使用ctags -R *生成符号列表，使用Ctrl-]转跳，Ctrl-o返回。</li>
 <li>REPL：需设定插件，请自行研究。</li>
 </ul>
-<p>参考： http://www.cnblogs.com/ifantastic/p/3185665.html</p>
+<p>更多资料，参考<a href="http://www.cnblogs.com/ifantastic/p/3185665.html">这里</a>。</p>
 </div>
 </div>
 </div></section><section>
@@ -5303,15 +5356,16 @@ calc.py      54      0   100%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pydiction的安装">pydiction的安装</h2>
-<ol style="list-style-type: decimal">
-<li>在这里 http://vim.sourceforge.net/scripts/script.php?script_id=850 下载组件。</li>
+<h2 id="pydiction-">pydiction的安装</h2>
+<ol>
+<li>在<a href="http://vim.sourceforge.net/scripts/script.php?script_id=850">这里</a>下载组件。</li>
 <li>然后将pydiction/after/ftplugin/python_pydiction.vim移动到~/.vim/after/ftplugin/。</li>
 <li>将pydiction/complete-dict移动到~/.vim/tools/pydiction/。</li>
 <li>在~/.vimrc里添加。</li>
 </ol>
-<p><code>filetype plugin on</code></p>
-<p><code>let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'</code></p>
+<pre><code>filetype plugin on
+let g:pydiction_location = &#39;~/.vim/tools/pydiction/complete-dict&#39;
+</code></pre>
 </div>
 </div>
 </div></section><section>
@@ -5321,8 +5375,8 @@ calc.py      54      0   100%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="eclipse配置">Eclipse配置</h2>
-<p>Eclipse的授权为独特的EPL。Eclipse安装完成后，加装pydev组件：http://www.pydev.org</p>
+<h2 id="eclipse-">Eclipse配置</h2>
+<p>Eclipse的授权为独特的EPL。Eclipse安装完成后，加装<a href="http://www.pydev.org">pydev组件</a></p>
 <ul>
 <li>语法高亮：自动支持</li>
 <li>自动缩进：自动支持</li>
@@ -5341,7 +5395,7 @@ calc.py      54      0   100%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pycharm配置">PyCharm配置</h2>
+<h2 id="pycharm-">PyCharm配置</h2>
 <p>PyCharm是一款商业的Python IDE，专业版以上为商业授权。同时有社区版，<a href="https://en.wikipedia.org/wiki/PyCharm#Licensing">社区版授权</a>为Apache License。</p>
 <ul>
 <li>语法高亮：自动支持</li>
@@ -5360,7 +5414,7 @@ calc.py      54      0   100%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="其他编辑器">其他编辑器</h2>
+<h2 id="-">其他编辑器</h2>
 <ul>
 <li>VS code</li>
 <li>Atom</li>
@@ -5378,13 +5432,13 @@ calc.py      54      0   100%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="最后作业">最后作业</h1>
+<h1 id="-">最后作业</h1>
 <p>根据当前用户目录下的~/.backup_setting.ini文件，从中读取所有需要备份的目录列表。</p>
 <p>找出所有文件，过滤~和.bak结尾的文件，过滤特定时间之前的，过滤特定正则表达式，然后使用tar.gz打包。</p>
 <p>再将打包结果命名为”年月日/时分秒.tar.gz”，放在指定目录下。</p>
 <p>上述内容需要用python完成，不得使用子进程调用其他程序。</p>
 <p>有能力的同学可以附加功能：</p>
-<ol style="list-style-type: decimal">
+<ol>
 <li>对结果做gpg加密或签名。注意加密的密钥不应当放在机器上，因此加密和签名很可能不是同一对公私钥。</li>
 <li>可以对结果做切片。</li>
 <li>打包完成后上传到S3，然后从本地删除。</li>

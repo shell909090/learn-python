@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>101 - Python入门 slides</title>
+<title>101-Python入门 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -229,7 +229,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python入门">Python入门</h1>
+<h1 id="python-">Python入门</h1>
 </div>
 </div>
 </div></section><section>
@@ -242,7 +242,7 @@ div.output_prompt {
 <h1 id="license">License</h1>
 <p>CC-BY-SA 4.0</p>
 <p>大部分内容来自”a byte of python”，在此感谢作者。</p>
-<p>http://python.swaroopch.com/</p>
+<p><a href="http://python.swaroopch.com/">http://python.swaroopch.com/</a></p>
 </div>
 </div>
 </div></section><section>
@@ -252,7 +252,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python的历史">python的历史</h1>
+<h1 id="python-">python的历史</h1>
 <p>作者：Guido van Rossum</p>
 <p>首次发行时间：1991</p>
 <p>版本系列：2.7 / 3.5</p>
@@ -267,7 +267,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="本讲义的兼容性">本讲义的兼容性</h1>
+<h1 id="-">本讲义的兼容性</h1>
 <p>本讲义的基础环境为python2.7/3.5。代码在这两种系统上测试通过。</p>
 <p>其中有少量代码有2/3不兼容现象，在讲课时会特别提出。</p>
 <p>本讲义的系统环境为Linux(Debian Stretch)，有少量指令在windows下有变化，亦会特别提出。</p>
@@ -282,15 +282,15 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python环境安装">python环境安装</h1>
+<h1 id="python-">python环境安装</h1>
 <p>Windows/MacOS:</p>
-<ol style="list-style-type: decimal">
-<li>访问 https://www.python.org/downloads/</li>
+<ol>
+<li>访问 <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
 <li>下载合适的版本</li>
 <li>点击安装</li>
 </ol>
 <p>Linux:</p>
-<ol style="list-style-type: decimal">
+<ol>
 <li>多数系统自带</li>
 <li>请找对应系统手册</li>
 </ol>
@@ -303,13 +303,13 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python运行交互界面">python运行交互界面</h1>
+<h1 id="python-">python运行交互界面</h1>
 <p>在命令行下执行python，进入python交互界面。类似这样：</p>
 <pre><code>Python 2.7.11+ (default, Apr 17 2016, 14:00:29)
 [GCC 5.3.1 20160409] on linux2
 Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt;</code></pre>
-<p>出现这个界面，说明你正常的安装了python。</p>
+&gt;&gt;&gt;
+</code></pre><p>出现这个界面，说明你正常的安装了python。</p>
 </div>
 </div>
 </div></section><section>
@@ -319,7 +319,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="jupyter演示界面">Jupyter演示界面</h1>
+<h1 id="jupyter-">Jupyter演示界面</h1>
 <p>Jupyter是一种记事本工具。可以插入代码，进行执行，显示结果，并把这些内容保存成记事本以供后续查阅。</p>
 <p>下面我们会大量使用Jupyter进行代码执行展示。</p>
 </div>
@@ -331,11 +331,14 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="简单命令测试">简单命令测试</h1>
+<h1 id="-">简单命令测试</h1>
 <p>在交互界面敲入1 + 2，出现如下结果：</p>
 <pre><code>&gt;&gt;&gt; 1 + 2
-3</code></pre>
-<p>在交互界面敲入print(‘1+2’)，出现如下结果： &gt;&gt;&gt; print('1+2') 1+2</p>
+3
+</code></pre><p>在交互界面敲入print(‘1+2’)，出现如下结果：</p>
+<pre><code>&gt;&gt;&gt; print(&#39;1+2&#39;)
+1+2
+</code></pre>
 </div>
 </div>
 </div></section><section>
@@ -406,8 +409,8 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="文件编辑和执行">文件编辑和执行</h1>
-<p>用任意编辑器（随你喜欢）新建一文件，修改内容为print('1+2')，然后将其保存为xxx.py文件。</p>
+<h1 id="-">文件编辑和执行</h1>
+<p>用任意编辑器（随你喜欢）新建一文件，修改内容为print(&#39;1+2&#39;)，然后将其保存为xxx.py文件。</p>
 <p>然后用python执行文件：python xxx.py</p>
 <p>注意，如果python不在默认路径中（常见于windows），需要写完整路径。</p>
 </div>
@@ -532,7 +535,7 @@ print(&apos;1+2&apos;)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="基本元素">基本元素</h1>
+<h1 id="-">基本元素</h1>
 <ul>
 <li>注释：以#开头的为注释，直到行结束为止。</li>
 <li>数字：以数字，.或者-开头的为数字。带小数点.的为浮点数，不带小数点的为整数。支持科学计数法，例如52.3E-4。</li>
@@ -548,7 +551,7 @@ print(&apos;1+2&apos;)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="例子">例子</h1>
+<h1 id="-">例子</h1>
 </div>
 </div>
 </div>
@@ -682,11 +685,11 @@ print(&apos;1+2&apos;)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="字符串转义">字符串转义</h1>
+<h1 id="-">字符串转义</h1>
 <p>在单引号字符串中表达单引号需要转义，双引号和三引号同。例如：</p>
-<p>“what’s wrong”是合法字符串。’what’s wrong’会出错，需要写为’what’s wrong’。</p>
-<p>转义也可以用于表达不可见字符，例如tab：。</p>
-<p>如果要表达，也需要转义，写为\。</p>
+<p>“what’s wrong”是合法字符串。’what’s wrong’会出错，需要写为’what\’s wrong’。</p>
+<p>转义也可以用于表达不可见字符，例如tab：\t。</p>
+<p>如果要表达\本身，也需要转义，写为\。</p>
 </div>
 </div>
 </div>
@@ -729,7 +732,7 @@ print(&apos;1+2&apos;)
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="raw-string">raw string</h1>
 <p>在字符串的开始加r，使得字符串中不发生转义。</p>
-<p>常用于大量需要表达。</p>
+<p>常用于大量需要表达\的字符串。</p>
 </div>
 </div>
 </div>
@@ -770,7 +773,7 @@ print(&apos;1+2&apos;)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="unicode字符串">Unicode字符串</h1>
+<h1 id="unicode-">Unicode字符串</h1>
 <p>在字符串前加u，表示这是一个unicode字符串。</p>
 <p>unicode字符串和普通字符串的区别在于。unicode字符串中，每一个位表示一个“字”。</p>
 <p>而普通字符串中，一个“字”可能由多个位表示。尤其是中文的情况下。</p>
@@ -890,7 +893,7 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="变量">变量</h1>
+<h1 id="-">变量</h1>
 <p>变量需要一个名字。</p>
 <p>首字母需要是字母或下划线，其余部分可以是字母，下划线和数字。</p>
 <p>变量大小写敏感，但是使用大小写区分变量是不可取的。</p>
@@ -903,7 +906,7 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="变量类型">变量类型</h1>
+<h1 id="-">变量类型</h1>
 <p>每个变量都会指向一个值，每个值都拥有一个类型。</p>
 <p>变量在运行过程中可以指向不同的值，拥有不同的类型。</p>
 <p>因此在运行前无法知道名字所对应的类型。（动态类型语言特征）</p>
@@ -918,14 +921,15 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="算符">算符</h1>
+<h1 id="-">算符</h1>
 <p>算符是连接一个或多个元素的符号，用来表达计算。</p>
 <p>常见算符：</p>
-<pre><code>+ - * ** / // % &lt;&lt; &gt;&gt; &amp; | ^ ~ &lt; &gt; &lt;= &gt;= == != not and or</code></pre>
-<p>算符和赋值的快速写法</p>
+<pre><code>+ - * ** / // % &lt;&lt; &gt;&gt; &amp; | ^ ~ &lt; &gt; &lt;= &gt;= == != not and or
+</code></pre><p>算符和赋值的快速写法</p>
 <pre><code>a = 10
 a = a + 10
-a += 10</code></pre>
+a += 10
+</code></pre>
 </div>
 </div>
 </div><aside class="notes">
@@ -948,14 +952,14 @@ a += 10</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="算符优先级">算符优先级</h1>
+<h1 id="-">算符优先级</h1>
 <ul>
 <li>lambda</li>
 <li>if - else</li>
 <li>or</li>
 <li>and</li>
 <li>not</li>
-<li>in, not in, is, is not, &lt;, &lt;=, &gt;, &gt;=, !=, ==</li>
+<li>in, not in, is, is not, &lt;, &lt;=, &gt;, &gt;=, !=, == </li>
 <li>|</li>
 <li>^</li>
 <li>&amp;</li>
@@ -965,7 +969,7 @@ a += 10</code></pre>
 <li>+x, -x, ~x</li>
 <li>**</li>
 <li>x[index], x[index:index], x(arguments...), x.attribute</li>
-<li>(expressions...), [expressions...], {key: value...}, {expressions...}</li>
+<li>(expressions...), [expressions...], {key: value...}, {expressions...} </li>
 </ul>
 <p>使用()可以改变优先级顺序</p>
 </div>
@@ -989,10 +993,11 @@ a += 10</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习">练习</h1>
+<h1 id="-">练习</h1>
 <p>计算以下表达式的求值顺序，并求值算出结果：</p>
 <pre><code>1 + 8 &lt;= 1 + 2 * 3
-1 + 2 and 3 * 4 or 5 ** 6</code></pre>
+1 + 2 and 3 * 4 or 5 ** 6
+</code></pre>
 </div>
 </div>
 </div><aside class="notes">
@@ -1013,7 +1018,7 @@ a += 10</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -1085,7 +1090,7 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="表达式">表达式</h1>
+<h1 id="-">表达式</h1>
 <p>表达式为一串由算符连接的元素。</p>
 <p>表达式一般会有值，值为按照优先级依次求解表达式得到的结果。</p>
 <p>有些表达式在语法上亦不可求值。</p>
@@ -1132,7 +1137,7 @@ area is 78.5
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="格式化字符串">格式化字符串</h1>
+<h1 id="-">格式化字符串</h1>
 <p>将变量的值格式化到字符串中，形成新的字符串。</p>
 <p>常用于输出数据内容。</p>
 </div>
@@ -1178,7 +1183,7 @@ my name is shell and the length of name is 5
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习">练习</h1>
+<h1 id="-">练习</h1>
 <ul>
 <li>编写一行代码，打印出hello, world。</li>
 <li>假定有变量name，值为你的名字。编写代码打印出hello, [your name]。</li>
@@ -1194,7 +1199,7 @@ my name is shell and the length of name is 5
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="执行流控制">执行流控制</h1>
+<h1 id="-">执行流控制</h1>
 <p>执行流控制代码控制流的先后执行顺序。</p>
 </div>
 </div>
@@ -1205,7 +1210,7 @@ my name is shell and the length of name is 5
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="逻辑行和物理行">逻辑行和物理行</h1>
+<h1 id="-">逻辑行和物理行</h1>
 <p>Python语句执行以行为单位。每行可选的可以以分号;结尾。</p>
 <p>但是物理上的一行可以包含多个执行单位，例如：</p>
 </div>
@@ -1285,12 +1290,12 @@ Hello, world
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="格式对齐">格式对齐</h1>
+<h1 id="-">格式对齐</h1>
 <p>Python使用对齐表达逻辑，例如：</p>
 <pre><code>if a == 1:
     print(&#39;ok&#39;)
-print(&#39;done&#39;)</code></pre>
-<p>当print(‘done’)和if对齐时，必然被执行。而和print(‘ok’)对齐时，在条件下执行。</p>
+print(&#39;done&#39;)
+</code></pre><p>当print(‘done’)和if对齐时，必然被执行。而和print(‘ok’)对齐时，在条件下执行。</p>
 <p>因此对齐不合适的代码会引发语法错误。</p>
 </div>
 </div>
@@ -1386,7 +1391,7 @@ done
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="单行写法">单行写法</h1>
+<h1 id="-">单行写法</h1>
 </div>
 </div>
 </div>
@@ -1425,7 +1430,7 @@ ok
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="常见执行流控制语句">常见执行流控制语句</h1>
+<h1 id="-">常见执行流控制语句</h1>
 <ul>
 <li>if</li>
 <li>while</li>
@@ -1707,7 +1712,7 @@ Enter something : quit
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习">练习</h1>
+<h1 id="-">练习</h1>
 <p>说出下面代码的执行过程和输出结果：</p>
 <pre><code>for i in range(10):
     if i &lt; 5:
@@ -1715,7 +1720,8 @@ Enter something : quit
     elif i &gt; 9:
         break
     else:
-        print(i)</code></pre>
+        print(i)
+</code></pre>
 </div>
 </div>
 </div></section><section>
@@ -1725,7 +1731,7 @@ Enter something : quit
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -1776,7 +1782,7 @@ Enter something : quit
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="函数的定义和调用">函数的定义和调用</h1>
+<h1 id="-">函数的定义和调用</h1>
 <p>定义：</p>
 </div>
 </div>
@@ -1839,7 +1845,7 @@ hello world
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="参数">参数</h1>
+<h1 id="-">参数</h1>
 <p>可以通过参数向函数传递数据。</p>
 </div>
 </div>
@@ -1917,7 +1923,7 @@ hello world
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>坑爹。print_max(3, '4')居然也能执行。说好的强类型呢？</p>
+<p>坑爹。print_max(3, &#39;4&#39;)居然也能执行。说好的强类型呢？</p>
 <p>需要着重声明例子中的返回是违背常理的。</p>
 </div>
 </div>
@@ -1929,7 +1935,7 @@ hello world
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="局部变量">局部变量</h1>
+<h1 id="-">局部变量</h1>
 <p>在函数体内定义的变量称为局部变量。</p>
 <p>局部变量在函数执行时产生，在函数结束时消亡。函数外无法看到局部变量。</p>
 <p>参数可视为一种局部变量。</p>
@@ -2013,7 +2019,7 @@ Changed local x to 2
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="全局变量">全局变量</h1>
+<h1 id="-">全局变量</h1>
 <p>在模块内定义的变量叫全局变量。</p>
 <p>全局变量在全局可见，函数体内可以引用全局变量。</p>
 <p>函数可以用global关键字声明某变量是全局的。</p>
@@ -2100,7 +2106,7 @@ x is 2 after function.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="作用域">作用域</h1>
+<h1 id="-">作用域</h1>
 <p>变量可见的范围叫做变量的作用域。</p>
 <p>局部变量的作用域在函数内，全局变量的作用域在模块内（关于模块后文会讲）。</p>
 <p>作用域的基本原则是，内层作用域可访问外层作用域的变量，反之外层不可访问内层变量。</p>
@@ -2114,7 +2120,7 @@ x is 2 after function.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="unbound异常">unbound异常</h1>
+<h1 id="unbound-">unbound异常</h1>
 <p>python内的“local中有变量定义”，是以local中存在对变量构建的语法（例如赋值）为标准的。</p>
 <p>这个构建语法所在行可能尚未执行（或永远无法执行到），但是这并不影响“local中有变量定义”这个事实。</p>
 <p>当local中定义了变量，但是变量尚未完成构建时，对变量做引用，会发生什么？</p>
@@ -2175,7 +2181,7 @@ x is 2 after function.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="参数默认值">参数默认值</h1>
+<h1 id="-">参数默认值</h1>
 <p>函数定义时，可以给参数一个值。当调用时，该参数并未给出的情况下，使用默认值。</p>
 <p>提示：从安全性角度来说，不要使用可变对象作为参数默认值。</p>
 </div>
@@ -2323,7 +2329,7 @@ WorldWorldWorldWorldWorld
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="返回值">返回值</h1>
+<h1 id="-">返回值</h1>
 <p>将函数内数据传递回去。</p>
 </div>
 </div>
@@ -2373,7 +2379,7 @@ The numbers are equal
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="多值返回">多值返回</h1>
+<h1 id="-">多值返回</h1>
 <p>Python允许一次返回多个值。</p>
 <p>多值返回的本质是使用tuple中转（后面详细讲解）。</p>
 </div>
@@ -2543,7 +2549,7 @@ The two values must be integers.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习">练习</h1>
+<h1 id="-">练习</h1>
 <p>定义fib函数。</p>
 <p>输入n，fib的输出为数列第n项的值。</p>
 <p>数列某项等于前两项之和。</p>
@@ -2557,7 +2563,7 @@ The two values must be integers.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>可演示递归和循环算法，比较其特性。说明简洁和快速的矛盾。</p>
-<p>可以在最后使用for循环打印输出，为后面“__main__标准写法”打基础。</p>
+<p>可以在最后使用for循环打印输出，为后面“<strong>main</strong>标准写法”打基础。</p>
 </div>
 </div>
 </div>
@@ -2568,7 +2574,7 @@ The two values must be integers.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -2815,13 +2821,13 @@ Writing testmod.py
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="模块预编译">模块预编译</h1>
+<h1 id="-">模块预编译</h1>
 <p>当import时，python会试图去编译出pyc文件来。</p>
 <p>pyc是被编译过的py文件，加载pyc文件可以跳过语法解析过程。</p>
 <p>当py日期新于pyc时，重新生成pyc。所以日期紊乱可能导致执行老代码。</p>
 <p>在Python3(3.2以后)中，会在当前目录下生成__pycache__目录，来缓存pyc文件。</p>
 <p>这样可以避免多个Python解释器无法互相载入对方的pyc文件。</p>
-<p>具体可以参考这里： https://docs.python.org/3/whatsnew/3.2.html</p>
+<p>具体可以参考这里： <a href="https://docs.python.org/3/whatsnew/3.2.html">https://docs.python.org/3/whatsnew/3.2.html</a> </p>
 </div>
 </div>
 </div><aside class="notes">
@@ -2843,7 +2849,7 @@ Writing testmod.py
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="演示">演示</h1>
+<h1 id="-">演示</h1>
 </div>
 </div>
 </div>
@@ -2912,8 +2918,8 @@ ls: 无法访问&apos;__pycache__/testmod*&apos;: 没有那个文件或目录
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="name__属性">__name__属性</h1>
-<p>模块有一个属性，__name__。当这个属性为'__main__'时，说明当前模块被作为脚本运行。</p>
+<h1 id="-_-_name-_-_-">__name__属性</h1>
+<p>模块有一个属性，__name__。当这个属性为&#39;__main__&#39;时，说明当前模块被作为脚本运行。</p>
 <p>模块被作为以脚本运行时，不生成pyc文件（因为不是import）。</p>
 </div>
 </div>
@@ -2986,7 +2992,7 @@ ls: 无法访问&apos;__pycache__/testmod*&apos;: 没有那个文件或目录
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="main文件模式化写法">main文件模式化写法</h1>
+<h1 id="main-">main文件模式化写法</h1>
 </div>
 </div>
 </div>
@@ -3094,7 +3100,7 @@ run as script
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习">练习</h1>
+<h1 id="-">练习</h1>
 <ul>
 <li>导入系统sys模块</li>
 <li>列出sys模块中以s开头并且以e结尾的成员。</li>
@@ -3119,7 +3125,7 @@ run as script
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -3164,7 +3170,7 @@ settrace
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="内置数据结构">内置数据结构</h1>
+<h1 id="-">内置数据结构</h1>
 <ul>
 <li>list</li>
 <li>tuple</li>
@@ -3416,7 +3422,7 @@ Number of animals in the new zoo is 5
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="操作序列对象">操作序列对象</h1>
+<h1 id="-">操作序列对象</h1>
 <ul>
 <li>通过[]访问</li>
 <li>通过[]设定值</li>
@@ -3496,8 +3502,8 @@ reversed characters is pooraws
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习">练习</h1>
-<ol style="list-style-type: decimal">
+<h1 id="-">练习</h1>
+<ol>
 <li>建立一个list，内容为10以内的所有质数。</li>
 <li>向这个列表，添加10-100以内的所有质数。最终得到的应该是100内所有质数的列表。</li>
 <li>将这个列表转为tuple。</li>
@@ -3524,7 +3530,7 @@ reversed characters is pooraws
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -3761,7 +3767,7 @@ reversed characters is pooraws
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="列表推导式">列表推导式</h1>
+<h1 id="-">列表推导式</h1>
 </div>
 </div>
 </div>
@@ -3802,7 +3808,7 @@ reversed characters is pooraws
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习2">练习2</h1>
+<h1 id="-2">练习2</h1>
 <p>思考一下，列表推导式是否能够将素数列表直接实现出来？为什么？</p>
 <p>然后自己测试一下。</p>
 </div>
@@ -4032,7 +4038,7 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习3">练习3</h1>
+<h1 id="-3">练习3</h1>
 <p>每个国家都有一定的地区号码，现在我们知道这些国家和地区号码关系：</p>
 <p>+30 希腊 +45 丹麦 +51 秘鲁 +65 新加坡 +86 中国</p>
 <p>写代码求出以下电话号码里面有几个国家：</p>
@@ -4046,7 +4052,7 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -4102,7 +4108,7 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="string的一些其他方法">string的一些其他方法</h1>
+<h1 id="string-">string的一些其他方法</h1>
 <ul>
 <li>startswith</li>
 <li>endswith</li>
@@ -4163,7 +4169,7 @@ Brazil_*_Russia_*_India_*_China
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="面对对象编程">面对对象编程</h1>
+<h1 id="-">面对对象编程</h1>
 <ul>
 <li>对象</li>
 <li>类</li>
@@ -4264,7 +4270,7 @@ Brazil_*_Russia_*_India_*_China
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="方法">方法</h1>
+<h1 id="-">方法</h1>
 <p>如何定义类的成员方法：</p>
 </div>
 </div>
@@ -4309,7 +4315,7 @@ Hello, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="数据">数据</h1>
+<h1 id="-">数据</h1>
 <p>对象里包含的数据。</p>
 <p>可以用.访问。</p>
 <p>和方法的主要差别在于。方法需要使用()来调用，而数据不需要。</p>
@@ -4376,7 +4382,7 @@ hello, shell, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="init__方法">__init__方法</h1>
+<h1 id="__init__-"><strong>init</strong>方法</h1>
 <p>__init__是对象的第一个方法，用于初始化对象数据。</p>
 <p>__init__函数是初始化方法，而非构造方法。</p>
 <p>在__init__函数被调用时，self对象已经创建完毕。</p>
@@ -4436,7 +4442,7 @@ hello, shell, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习">练习</h1>
+<h1 id="-">练习</h1>
 <p>定义一个马克杯类，定义一个加水方法和一个喝水方法。</p>
 </div>
 </div>
@@ -4447,7 +4453,7 @@ hello, shell, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -4476,7 +4482,7 @@ hello, shell, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="类成员和对象成员">类成员和对象成员</h1>
+<h1 id="-">类成员和对象成员</h1>
 <p>类和对象分别拥有成员，例如数据和方法。</p>
 <p>对象可以引用类成员，例如p.say_hi()。也可以引用对象成员，或者self.name。</p>
 <p>当有重名时优先引用对象成员。</p>
@@ -4605,7 +4611,7 @@ We have 0 robots.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习2">练习2</h1>
+<h1 id="-2">练习2</h1>
 <p>思考一下，上一节你的定义里是否考虑了马克杯的“最大容量”。如果没有，请加上。并且思考一下，“最大容量”是对象属性还是类属性，为什么？</p>
 </div>
 </div>
@@ -4616,7 +4622,7 @@ We have 0 robots.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -4650,14 +4656,15 @@ We have 0 robots.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="继承">继承</h1>
+<h1 id="-">继承</h1>
 <p>继承关系分为基类和继承类（也叫父类和子类）。</p>
 <p>子类可以继承父类的成员。当子类和父类定义同名成员时，优先引用子类的。</p>
 <p>原则上说，父类能做的事，子类一定能做（虽然行为可能有差异）。父类能出现的地方，子类一定能出现。</p>
 <p>因为子类拥有父类的所有成员。</p>
 <p>继承的写法为：</p>
 <pre><code>class Person(Animal):
-    pass</code></pre>
+    pass
+</code></pre>
 </div>
 </div>
 </div></section><section>
@@ -4760,7 +4767,7 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习3">练习3</h1>
+<h1 id="-3">练习3</h1>
 <p>请为马克杯增加一个“添满”方法，可以求出需要添多少水到加满，并自动为杯子加水。</p>
 </div>
 </div>
@@ -4771,7 +4778,7 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -4808,7 +4815,7 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习4">练习4</h1>
+<h1 id="-4">练习4</h1>
 <p>请定义一个运动杯类，并同样实现“喝水”，“加水”和“添满”方法。</p>
 </div>
 </div>
@@ -4819,7 +4826,7 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习5">练习5</h1>
+<h1 id="-5">练习5</h1>
 <p>考虑一下，“马克杯”和“运动杯”的“添满”行为是否一样，两边是否可以重用“添满”？</p>
 <p>如果可以，怎么做？</p>
 </div>
@@ -4831,7 +4838,7 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -4922,7 +4929,7 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="从命令行输入">从命令行输入</h1>
+<h1 id="-">从命令行输入</h1>
 <p>python3使用input从命令行输入。python2使用raw_input从命令行输入。</p>
 <p>两者参数一致，都是一个提示字符串。</p>
 <p>在python2中，input是eval(input)，有安全性问题。</p>
@@ -4978,7 +4985,7 @@ No, it is not a palindrome
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习">练习</h1>
+<h1 id="-">练习</h1>
 <p>刚刚的回文字符串程序只能检测纯粹的字符串，真正的回文字符检测程序应当能够处理标点，空格和大小写。</p>
 <p>例如&quot;Rise to vote, sir.&quot;实际上也是回文字符串，但是刚刚的程序判定他不是。</p>
 <p>请写出一个新的版本。</p>
@@ -4992,7 +4999,7 @@ No, it is not a palindrome
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="答案">答案</h1>
+<h1 id="-">答案</h1>
 </div>
 </div>
 </div>
@@ -5047,7 +5054,7 @@ Yes, it is a palindrome
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="从文件中输入输出">从文件中输入输出</h1>
+<h1 id="-">从文件中输入输出</h1>
 <p>使用open打开文件进行读写。调用方法和C的fopen类似。</p>
 </div>
 </div>
@@ -5223,14 +5230,16 @@ if you wanna make your work also fun:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="异常">异常</h1>
-<p>Python允许在出现错误的时候，“抛”出特定错误。错误按照调用顺序依次向上找，找到第一个合适的处理方法对错误进行处理。 如果无人处理错误，则程序崩溃。这种错误处理机制允许调用者对函数深层的错误进行容错，同时中间所有代码对这个过程无需干预。</p>
+<h1 id="-">异常</h1>
+<p>Python允许在出现错误的时候，“抛”出特定错误。错误按照调用顺序依次向上找，找到第一个合适的处理方法对错误进行处理。
+如果无人处理错误，则程序崩溃。这种错误处理机制允许调用者对函数深层的错误进行容错，同时中间所有代码对这个过程无需干预。</p>
 <pre><code>&gt;&gt;&gt; Print(&quot;Hello World&quot;)
 Traceback (most recent call last):
   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
 NameError: name &#39;Print&#39; is not defined
 &gt;&gt;&gt; print(&quot;Hello World&quot;)
-Hello World</code></pre>
+Hello World
+</code></pre>
 </div>
 </div>
 </div></section><section>
@@ -5302,7 +5311,7 @@ Hello World
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="异常输出阅读">异常输出阅读</h1>
+<h1 id="-">异常输出阅读</h1>
 <p>异常输出通常和函数的调用顺序相同，和栈的顺序相反。</p>
 <p>最上层的调用（最先发生的）在最上面，最后执行到的地方在最下面。最后一个异常行就是一场发生的精确地点。</p>
 <p>最后一行是异常的名字和参数。</p>
@@ -5383,7 +5392,7 @@ layer2 called
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="异常处理">异常处理</h1>
+<h1 id="-">异常处理</h1>
 <p>常规异常处理代码段需要包含三部分内容：被监管代码体，错误类型和异常处理代码体。</p>
 <p>当被监管代码体中发生异常时，异常被向上抛出。</p>
 <p>向上寻找处理函数的异常属于定义的这个错误类的子类时，异常处理代码体被调用。</p>
@@ -5439,7 +5448,7 @@ You entered 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="常见异常">常见异常</h1>
+<h1 id="-">常见异常</h1>
 <ul>
 <li>AttributeError</li>
 <li>ImportError</li>
@@ -5460,7 +5469,7 @@ You entered 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="抛出异常">抛出异常</h1>
+<h1 id="-">抛出异常</h1>
 </div>
 </div>
 </div>
@@ -5518,7 +5527,7 @@ actually not
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="自定义异常">自定义异常</h1>
+<h1 id="-">自定义异常</h1>
 </div>
 </div>
 </div>
@@ -5722,10 +5731,10 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="文档获得和查阅">文档获得和查阅</h1>
+<h1 id="-">文档获得和查阅</h1>
 <p>在线文档：</p>
-<p>https://docs.python.org/2/</p>
-<p>https://docs.python.org/3/</p>
+<p><a href="https://docs.python.org/2/">https://docs.python.org/2/</a></p>
+<p><a href="https://docs.python.org/3/">https://docs.python.org/3/</a> </p>
 <p>本地文档：随安装版本变化。</p>
 <p>两者冲突以本地为准，本地一定对应安装使用的版本。</p>
 <p>库查Library Reference，这是最主要部分。</p>
@@ -5739,7 +5748,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="练习">练习</h1>
+<h1 id="-">练习</h1>
 <p>打开文档，请查阅itertools.permutations的意义，参数，返回值，用法，注意要点等信息。并向大家解释。</p>
 </div>
 </div>
@@ -5750,7 +5759,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="第三方文档查询">第三方文档查询</h1>
+<h1 id="-">第三方文档查询</h1>
 <p>没有什么固定方法。</p>
 <p>在google（注意，不是baidu）上搜索关键词。找一个比较像的官网。找到文档。</p>
 <p>可以参考pypi，很多第三方库可以在上面找到。里面往往带有文档地址。</p>
@@ -5764,15 +5773,15 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python2和python3的差异">python2和python3的差异</h1>
+<h1 id="python2-python3-">python2和python3的差异</h1>
 <p>python2和python3有很多细节差异。但是大致来说，最主要的差异有以下三项。</p>
-<ol style="list-style-type: decimal">
+<ol>
 <li>python2的print由关键字改为了函数。因此print ‘xxx’的写法就不合法了。</li>
 <li>在python3中，所有的字符串默认都是unicode。要处理原生数据需要用bytes。</li>
 <li>python3中/不是整数除法。</li>
 </ol>
 <p>在下面这个连接里，收录了python2和python3的其他一些细节差异。</p>
-<p>https://wiki.python.org/moin/Python2orPython3</p>
+<p><a href="https://wiki.python.org/moin/Python2orPython3">https://wiki.python.org/moin/Python2orPython3</a></p>
 </div>
 </div>
 </div></section><section>
@@ -5782,7 +5791,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python2到3迁移">python2到3迁移</h1>
+<h1 id="python2-3-">python2到3迁移</h1>
 <p>python3带有2to3脚本，可以完成很多项目的迁移。</p>
 <p>但是对于某些情况，他仍然不能自动的完成所有工作。</p>
 <p>2到3迁移的主要问题在于，目前有很多库，仍然没有完成python3的迁移工作。</p>
@@ -5796,7 +5805,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="我该用哪个版本哪个更好">我该用哪个版本/哪个更好</h1>
+<h1 id="-">我该用哪个版本/哪个更好</h1>
 <p>任何能让你不添加额外的麻烦把工作做下来的版本都是好的。</p>
 <p>如果python2和python3一样好，那么python3更好。</p>
 </div>
@@ -5810,7 +5819,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="第三方软件安装">第三方软件安装</h1>
+<h1 id="-">第三方软件安装</h1>
 <p>两套基本系统：</p>
 <ul>
 <li>setuptools</li>
@@ -5828,9 +5837,10 @@ Press ctrl+c now
 <h1 id="setuptools">setuptools</h1>
 <p>系统中必须安装了setuptools（请咨询管理员安装），或者使用以下指令安装：</p>
 <p>Linux:</p>
-<pre><code>wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python</code></pre>
-<p>MacOS:</p>
-<pre><code>curl https://bootstrap.pypa.io/ez_setup.py -o - | python</code></pre>
+<pre><code>wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
+</code></pre><p>MacOS:</p>
+<pre><code>curl https://bootstrap.pypa.io/ez_setup.py -o - | python
+</code></pre>
 </div>
 </div>
 </div></section><section>
@@ -5840,13 +5850,13 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="setuptools的使用">setuptools的使用</h1>
-<ol style="list-style-type: decimal">
+<h1 id="setuptools-">setuptools的使用</h1>
+<ol>
 <li>easy_install 包名</li>
 <li>easy_install 安装包路径。（路径可以填写一个url，系统会从网络上下载安装）</li>
 <li>在软件的分发包中找到setup.py，直接运行python setup.py install</li>
 </ol>
-<p>进一步资料请参考：https://setuptools.readthedocs.io/en/latest/easy_install.html</p>
+<p>进一步资料请参考：<a href="https://setuptools.readthedocs.io/en/latest/easy_install.html">https://setuptools.readthedocs.io/en/latest/easy_install.html</a></p>
 </div>
 </div>
 </div></section><section>
@@ -5858,7 +5868,7 @@ Press ctrl+c now
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="pip">pip</h1>
 <p>系统中必须有pip，具体请咨询管理员。或者下载该文件：</p>
-<p>https://bootstrap.pypa.io/get-pip.py</p>
+<p><a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a></p>
 <p>使用python执行安装（注意需要管理员权限）。</p>
 </div>
 </div>
@@ -5869,8 +5879,8 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pip的使用">pip的使用</h1>
-<ol style="list-style-type: decimal">
+<h1 id="pip-">pip的使用</h1>
+<ol>
 <li>pip install 包名</li>
 <li>pip install -r requirements.txt （自动处理里面的所有依赖）</li>
 </ol>
@@ -5896,7 +5906,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="virtualenv的使用">virtualenv的使用</h1>
+<h1 id="virtualenv-">virtualenv的使用</h1>
 <p>建立环境：virtualenv 目录名</p>
 <p>激活环境：进入目录后执行source bin/activate</p>
 <p>退出激活环境：deactivate</p>
@@ -5911,7 +5921,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="访问系统库">访问系统库</h1>
+<h1 id="-">访问系统库</h1>
 <p>如果在使用virtualenv的同时，也想使用系统中安装的库。那么需要在创建环境时用--system-site-packages参数。</p>
 <p>从工程管理角度，我们不推荐这种办法。建议将系统中的所有库在虚环境中再安装一次。</p>
 </div>
@@ -5923,7 +5933,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="虚拟环境的发布">虚拟环境的发布</h1>
+<h1 id="-">虚拟环境的发布</h1>
 <p>使用virtualenv生成的虚拟环境可以迁移到其他机器上，从而允许将运行环境在多台机器上迁移。但是需要注意以下事项：</p>
 <ul>
 <li>virtualenv依赖于目录工作，所以所有机器上virtualenv必须处于同一路径下。</li>
@@ -5939,9 +5949,9 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="更进一步资料">更进一步资料</h1>
+<h1 id="-">更进一步资料</h1>
 <p>请参考这里：</p>
-<p>https://virtualenv.pypa.io/en/stable/userguide/</p>
+<p><a href="https://virtualenv.pypa.io/en/stable/userguide/">https://virtualenv.pypa.io/en/stable/userguide/</a></p>
 </div>
 </div>
 </div></section><section>
@@ -5951,7 +5961,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="软件包安装和管理建议">软件包安装和管理建议</h1>
+<h1 id="-">软件包安装和管理建议</h1>
 <p>Python默认情况下会试图将软件包安装到系统里，如果不具备管理员权限，需要使用virtualenv来安装软件包。</p>
 <p>对于Debian/Ubuntu而言，安装软件的第一选择是apt系统。如果找不到包，或版本不对，建议采用virtualenv + pip的方式安装。</p>
 <p>对于RHEL/CentOS而言，安装软件的第一选择是yum系统。如果找不到包，或版本不对，建议采用virtualenv + pip的方式安装。</p>
