@@ -16,10 +16,11 @@
   * Jupyter演示界面
   * 简单命令测试
   * 文件编辑和执行
-* 基本元素
-  * 基本语法
+* Python基本语法
+  * 基本类型
   * 字符串转义
-  * Raw string
+  * Raw String
+  * Unicode字符串
   * 变量
   * 变量类型
 * 算符和表达式
@@ -46,37 +47,37 @@
   * 参数默认值
   * 返回值
   * 多值返回
-  * Doc string
+  * Doc String
   * Lambda
 * 模块
   * Module
-  * Import
-  * From import
-  * Dir
+  * import
+  * from import
+  * dir
   * 模块预编译
   * \_\_name\_\_属性
   * Main文件模式化写法
   * Package
 * 内置数据结构
-  * List
-  * Tuple
+  * list
+  * tuple
   * 操作序列对象
   * 列表推导式
-  * Dict
-  * Set
-  * String
+  * dict
+  * set
+  * string
 * 面对对象编程
-  * Class
+  * class
   * 方法
   * 数据
-  * Self
+  * self
   * \_\_init\_\_方法
   * 类成员和对象成员
   * 继承
 * 输入输出
   * 从命令行输入
   * 从文件中输入输出
-  * With
+  * with
 * 异常
   * 异常
   * 异常输出阅读
@@ -84,22 +85,22 @@
   * 常见异常
   * 抛出异常
   * 自定义异常
-  * Finally
-  * Assert
+  * finally
+  * assert
 * 文档
   * 文档获得和查阅
   * 第三方文档查询
-* Python2和python3
-  * Python2和python3的差异
-  * 2到3迁移
+* Python2和Python3的差异
+  * 简述
+  * Python2到3迁移
   * 我该用哪个版本
 * 第三方软件安装
-  * Setuptools
-  * Setuptools的使用
-  * Pip
-  * Pip的使用
-  * Virtualenv
-  * Virtualenv的使用
+  * setuptools
+  * setuptools的使用
+  * pip
+  * pip的使用
+  * virtualenv
+  * virtualenv的使用
   * 访问系统库
   * 虚拟环境的发布
   * 软件包安装和管理建议

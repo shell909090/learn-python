@@ -239,7 +239,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="license">License</h1>
+<h2 id="license">License</h2>
 <p>CC-BY-SA 4.0</p>
 <p>大部分内容来自”a byte of python”，在此感谢作者。</p>
 <p><a href="http://python.swaroopch.com/">http://python.swaroopch.com/</a></p>
@@ -252,7 +252,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python-">python的历史</h1>
+<h2 id="python-">python的历史</h2>
 <p>作者：Guido van Rossum</p>
 <p>首次发行时间：1991</p>
 <p>版本系列：2.7 / 3.5</p>
@@ -267,7 +267,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">本讲义的兼容性</h1>
+<h2 id="-">本讲义的兼容性</h2>
 <p>本讲义的基础环境为python2.7/3.5。代码在这两种系统上测试通过。</p>
 <p>其中有少量代码有2/3不兼容现象，在讲课时会特别提出。</p>
 <p>本讲义的系统环境为Linux(Debian Stretch)，有少量指令在windows下有变化，亦会特别提出。</p>
@@ -282,7 +282,17 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python-">python环境安装</h1>
+<h1 id="-">基础环境准备</h1>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="python-">python环境安装</h2>
 <p>Windows/MacOS:</p>
 <ol>
 <li>访问 <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
@@ -303,7 +313,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python-">python运行交互界面</h1>
+<h2 id="python-">python运行交互界面</h2>
 <p>在命令行下执行python，进入python交互界面。类似这样：</p>
 <pre><code>Python 2.7.11+ (default, Apr 17 2016, 14:00:29)
 [GCC 5.3.1 20160409] on linux2
@@ -319,7 +329,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="jupyter-">Jupyter演示界面</h1>
+<h2 id="jupyter-">Jupyter演示界面</h2>
 <p>Jupyter是一种记事本工具。可以插入代码，进行执行，显示结果，并把这些内容保存成记事本以供后续查阅。</p>
 <p>下面我们会大量使用Jupyter进行代码执行展示。</p>
 </div>
@@ -331,7 +341,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">简单命令测试</h1>
+<h2 id="-">简单命令测试</h2>
 <p>在交互界面敲入1 + 2，出现如下结果：</p>
 <pre><code>&gt;&gt;&gt; 1 + 2
 3
@@ -409,7 +419,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">文件编辑和执行</h1>
+<h2 id="-">文件编辑和执行</h2>
 <p>用任意编辑器（随你喜欢）新建一文件，修改内容为print(&#39;1+2&#39;)，然后将其保存为xxx.py文件。</p>
 <p>然后用python执行文件：python xxx.py</p>
 <p>注意，如果python不在默认路径中（常见于windows），需要写完整路径。</p>
@@ -513,7 +523,8 @@ print(&apos;1+2&apos;)
 </div>
 </div>
 
-</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
@@ -526,7 +537,8 @@ print(&apos;1+2&apos;)
 </div>
 </div>
 
-</div></section>
+</div>
+    </div></section>
     </section><section>
     <section>
     
@@ -535,13 +547,7 @@ print(&apos;1+2&apos;)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">基本元素</h1>
-<ul>
-<li>注释：以#开头的为注释，直到行结束为止。</li>
-<li>数字：以数字，.或者-开头的为数字。带小数点.的为浮点数，不带小数点的为整数。支持科学计数法，例如52.3E-4。</li>
-<li>字符串：以单引号’，双引号”，三引号’’’开始，同样符号结束。</li>
-</ul>
-<p>练习：写出以上三个基本元素的例子。</p>
+<h1 id="python-">Python基本语法</h1>
 </div>
 </div>
 </div></section><section>
@@ -551,7 +557,25 @@ print(&apos;1+2&apos;)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">例子</h1>
+<h2 id="-">基本类型</h2>
+<ul>
+<li>注释：以#开头的为注释，直到行结束为止。</li>
+<li>数字：以数字，.或者-开头的为数字。带小数点.的为浮点数，不带小数点的为整数。支持科学计数法，例如52.3E-4。</li>
+<li>字符串：以单引号’，双引号”，三引号’’’开始，同样符号结束。</li>
+<li>布尔值：只有两个，True和False。大小写敏感。</li>
+<li>空值：只有一个，None。大小写敏感。表示没有值的值。</li>
+</ul>
+<p>练习：写出数字和字符串的例子，并加以注释。</p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">例子</h2>
 </div>
 </div>
 </div>
@@ -680,25 +704,12 @@ print(&apos;1+2&apos;)
 
 </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">字符串转义</h1>
-<p>在单引号字符串中表达单引号需要转义，双引号和三引号同。例如：</p>
-<p>“what’s wrong”是合法字符串。’what’s wrong’会出错，需要写为’what\’s wrong’。</p>
-<p>转义也可以用于表达不可见字符，例如tab：\t。</p>
-<p>如果要表达\本身，也需要转义，写为\。</p>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="s1">&#39;what</span><span class="se">\&#39;</span><span class="s1">s wrong&#39;</span>
+<div class="highlight"><pre><span></span><span class="bp">True</span>
 </pre></div>
 
 </div>
@@ -714,7 +725,7 @@ print(&apos;1+2&apos;)
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&quot;what&apos;s wrong&quot;
+True
 </pre>
 </div>
 
@@ -723,25 +734,13 @@ print(&apos;1+2&apos;)
 </div>
 </div>
 
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="raw-string">raw string</h1>
-<p>在字符串的开始加r，使得字符串中不发生转义。</p>
-<p>常用于大量需要表达\的字符串。</p>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="s1">r&#39;what</span><span class="se">\&#39;</span><span class="s1">s wrong&#39;</span>
+<div class="highlight"><pre><span></span><span class="bp">False</span>
 </pre></div>
 
 </div>
@@ -757,7 +756,7 @@ print(&apos;1+2&apos;)
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&quot;what\\&apos;s wrong&quot;
+False
 </pre>
 </div>
 
@@ -766,29 +765,13 @@ print(&apos;1+2&apos;)
 </div>
 </div>
 
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="unicode-">Unicode字符串</h1>
-<p>在字符串前加u，表示这是一个unicode字符串。</p>
-<p>unicode字符串和普通字符串的区别在于。unicode字符串中，每一个位表示一个“字”。</p>
-<p>而普通字符串中，一个“字”可能由多个位表示。尤其是中文的情况下。</p>
-<p>unicode字符串和普通字符串外形相似，但是很多地方无法混用。</p>
-<p>更进一步信息在“字符编码简说”这章有详细解释。</p>
-</div>
-</div>
-</div></section><section>
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="s1">u&#39;string&#39;</span>
+<div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
 
 </div>
@@ -804,7 +787,7 @@ print(&apos;1+2&apos;)
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-u&apos;string&apos;
+False
 </pre>
 </div>
 
@@ -819,7 +802,7 @@ u&apos;string&apos;
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="s1">&#39;string&#39;</span> <span class="o">==</span> <span class="s1">u&#39;string&#39;</span>
+<div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>
 </pre></div>
 
 </div>
@@ -850,6 +833,185 @@ True
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class="highlight"><pre><span></span><span class="bp">None</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">字符串转义</h2>
+<p>在单引号字符串中表达单引号需要转义，双引号和三引号同。例如：</p>
+<p>“what’s wrong”是合法字符串。’what’s wrong’会出错，需要写为’what\’s wrong’。</p>
+<p>转义也可以用于表达不可见字符，例如tab：\t。</p>
+<p>如果要表达\本身，也需要转义，写为\。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="s1">&#39;what</span><span class="se">\&#39;</span><span class="s1">s wrong&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+&quot;what&apos;s wrong&quot;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="raw-string">Raw String</h2>
+<p>在字符串的开始加r，使得字符串中不发生转义。</p>
+<p>常用于大量需要表达\的字符串。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="s1">r&#39;what</span><span class="se">\&#39;</span><span class="s1">s wrong&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+&quot;what\\&apos;s wrong&quot;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="unicode-">Unicode字符串</h2>
+<p>在字符串前加u，表示这是一个unicode字符串。</p>
+<p>unicode字符串和普通字符串的区别在于。unicode字符串中，每一个位表示一个“字”。</p>
+<p>而普通字符串中，一个“字”可能由多个位表示。尤其是中文的情况下。</p>
+<p>unicode字符串和普通字符串外形相似，但是很多地方无法混用。</p>
+<p>更进一步信息在“字符编码简说”这章有详细解释。</p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="s1">u&#39;string&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+u&apos;string&apos;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="s1">&#39;string&#39;</span> <span class="o">==</span> <span class="s1">u&#39;string&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+True
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="s1">&#39;中文&#39;</span> <span class="o">==</span> <span class="s1">u&#39;中文&#39;</span>
 <span class="c1"># 在Python2下不相等，Python3下相等。因为Python3下都是Unicode。</span>
@@ -872,7 +1034,7 @@ True
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -893,7 +1055,7 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">变量</h1>
+<h2 id="-">变量</h2>
 <p>变量需要一个名字。</p>
 <p>首字母需要是字母或下划线，其余部分可以是字母，下划线和数字。</p>
 <p>变量大小写敏感，但是使用大小写区分变量是不可取的。</p>
@@ -906,7 +1068,7 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">变量类型</h1>
+<h2 id="-">变量类型</h2>
 <p>每个变量都会指向一个值，每个值都拥有一个类型。</p>
 <p>变量在运行过程中可以指向不同的值，拥有不同的类型。</p>
 <p>因此在运行前无法知道名字所对应的类型。（动态类型语言特征）</p>
@@ -921,7 +1083,17 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">算符</h1>
+<h1 id="-">算符和表达式</h1>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">算符</h2>
 <p>算符是连接一个或多个元素的符号，用来表达计算。</p>
 <p>常见算符：</p>
 <pre><code>+ - * ** / // % &lt;&lt; &gt;&gt; &amp; | ^ ~ &lt; &gt; &lt;= &gt;= == != not and or
@@ -952,7 +1124,7 @@ a += 10
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">算符优先级</h1>
+<h2 id="-">算符优先级</h2>
 <ul>
 <li>lambda</li>
 <li>if - else</li>
@@ -993,7 +1165,7 @@ a += 10
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">练习</h1>
+<h2 id="-">练习</h2>
 <p>计算以下表达式的求值顺序，并求值算出结果：</p>
 <pre><code>1 + 8 &lt;= 1 + 2 * 3
 1 + 2 and 3 * 4 or 5 ** 6
@@ -1018,13 +1190,13 @@ a += 10
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>
@@ -1038,7 +1210,7 @@ a += 10
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[21]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1055,7 +1227,7 @@ False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span> <span class="ow">or</span> <span class="mi">5</span> <span class="o">**</span> <span class="mi">6</span>
@@ -1069,7 +1241,7 @@ False
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1090,7 +1262,7 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">表达式</h1>
+<h2 id="-">表达式</h2>
 <p>表达式为一串由算符连接的元素。</p>
 <p>表达式一般会有值，值为按照优先级依次求解表达式得到的结果。</p>
 <p>有些表达式在语法上亦不可求值。</p>
@@ -1101,7 +1273,7 @@ False
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">Pi</span> <span class="o">=</span> <span class="mf">3.14</span>
@@ -1137,7 +1309,7 @@ area is 78.5
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">格式化字符串</h1>
+<h2 id="-">格式化字符串</h2>
 <p>将变量的值格式化到字符串中，形成新的字符串。</p>
 <p>常用于输出数据内容。</p>
 </div>
@@ -1146,7 +1318,7 @@ area is 78.5
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;shell&#39;</span>
@@ -1183,7 +1355,7 @@ my name is shell and the length of name is 5
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">练习</h1>
+<h2 id="-">练习</h2>
 <ul>
 <li>编写一行代码，打印出hello, world。</li>
 <li>假定有变量name，值为你的名字。编写代码打印出hello, [your name]。</li>
@@ -1210,7 +1382,7 @@ my name is shell and the length of name is 5
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">逻辑行和物理行</h1>
+<h2 id="-">逻辑行和物理行</h2>
 <p>Python语句执行以行为单位。每行可选的可以以分号;结尾。</p>
 <p>但是物理上的一行可以包含多个执行单位，例如：</p>
 </div>
@@ -1218,7 +1390,7 @@ my name is shell and the length of name is 5
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
@@ -1256,7 +1428,7 @@ my name is shell and the length of name is 5
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span>
@@ -1290,12 +1462,50 @@ Hello, world
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">格式对齐</h1>
+<h2 id="-">格式对齐</h2>
 <p>Python使用对齐表达逻辑，例如：</p>
-<pre><code>if a == 1:
-    print(&#39;ok&#39;)
-print(&#39;done&#39;)
-</code></pre><p>当print(‘done’)和if对齐时，必然被执行。而和print(‘ok’)对齐时，在条件下执行。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;ok&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+ok
+done
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>当print(‘done’)和if对齐时，必然被执行。而和print(‘ok’)对齐时，在条件下执行。</p>
 <p>因此对齐不合适的代码会引发语法错误。</p>
 </div>
 </div>
@@ -1303,7 +1513,7 @@ print(&#39;done&#39;)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1346,7 +1556,7 @@ done
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1391,13 +1601,13 @@ done
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">单行写法</h1>
+<h2 id="-">单行写法</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">if</span> <span class="bp">True</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;ok&#39;</span><span class="p">)</span>
@@ -1430,30 +1640,13 @@ ok
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">常见执行流控制语句</h1>
-<ul>
-<li>if</li>
-<li>while</li>
-<li>for</li>
-<li>break</li>
-<li>continue</li>
-</ul>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="if">if</h1>
+<h2 id="if">if</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">23</span>
@@ -1501,13 +1694,13 @@ Done
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="while">while</h1>
+<h2 id="while">while</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">23</span>
@@ -1563,13 +1756,13 @@ Done
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="for">for</h1>
+<h2 id="for">for</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
@@ -1609,13 +1802,13 @@ The for loop is over
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="break">break</h1>
+<h2 id="break">break</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
@@ -1659,13 +1852,13 @@ Done
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="continue">continue</h1>
+<h2 id="continue">continue</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
@@ -1712,7 +1905,7 @@ Enter something : quit
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">练习</h1>
+<h2 id="-">练习</h2>
 <p>说出下面代码的执行过程和输出结果：</p>
 <pre><code>for i in range(10):
     if i &lt; 5:
@@ -1731,13 +1924,13 @@ Enter something : quit
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -1782,14 +1975,24 @@ Enter something : quit
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">函数的定义和调用</h1>
+<h1 id="-">函数</h1>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">函数的定义和调用</h2>
 <p>定义：</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
@@ -1812,7 +2015,7 @@ Enter something : quit
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">say_hello</span><span class="p">()</span>
@@ -1845,14 +2048,14 @@ hello world
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">参数</h1>
+<h2 id="-">参数</h2>
 <p>可以通过参数向函数传递数据。</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
@@ -1888,7 +2091,7 @@ hello world
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">print_max</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">)</span>
@@ -1935,7 +2138,7 @@ hello world
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">局部变量</h1>
+<h2 id="-">局部变量</h2>
 <p>在函数体内定义的变量称为局部变量。</p>
 <p>局部变量在函数执行时产生，在函数结束时消亡。函数外无法看到局部变量。</p>
 <p>参数可视为一种局部变量。</p>
@@ -1946,7 +2149,7 @@ hello world
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
@@ -1981,7 +2184,7 @@ Changed local x to 2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
@@ -2019,7 +2222,7 @@ Changed local x to 2
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">全局变量</h1>
+<h2 id="-">全局变量</h2>
 <p>在模块内定义的变量叫全局变量。</p>
 <p>全局变量在全局可见，函数体内可以引用全局变量。</p>
 <p>函数可以用global关键字声明某变量是全局的。</p>
@@ -2029,7 +2232,7 @@ Changed local x to 2
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
@@ -2061,7 +2264,7 @@ x is 50
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
@@ -2106,7 +2309,7 @@ x is 2 after function.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">作用域</h1>
+<h2 id="-">作用域</h2>
 <p>变量可见的范围叫做变量的作用域。</p>
 <p>局部变量的作用域在函数内，全局变量的作用域在模块内（关于模块后文会讲）。</p>
 <p>作用域的基本原则是，内层作用域可访问外层作用域的变量，反之外层不可访问内层变量。</p>
@@ -2120,7 +2323,7 @@ x is 2 after function.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="unbound-">unbound异常</h1>
+<h2 id="unbound-">Unbound异常</h2>
 <p>python内的“local中有变量定义”，是以local中存在对变量构建的语法（例如赋值）为标准的。</p>
 <p>这个构建语法所在行可能尚未执行（或永远无法执行到），但是这并不影响“local中有变量定义”这个事实。</p>
 <p>当local中定义了变量，但是变量尚未完成构建时，对变量做引用，会发生什么？</p>
@@ -2130,7 +2333,7 @@ x is 2 after function.
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">my_variable</span> <span class="o">=</span> <span class="mi">1</span>
@@ -2155,12 +2358,12 @@ x is 2 after function.
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">UnboundLocalError</span>                         Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-39-d5f2fcf5ccf1&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-45-d5f2fcf5ccf1&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">      5</span>     my_variable <span class="ansiblue">=</span> <span class="ansicyan">2</span><span class="ansiblue"></span>
 <span class="ansigreen">      6</span> <span class="ansiblue"></span>
 <span class="ansigreen">----&gt; 7</span><span class="ansired"> </span>func<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 
-<span class="ansigreen">&lt;ipython-input-39-d5f2fcf5ccf1&gt;</span> in <span class="ansicyan">func</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-45-d5f2fcf5ccf1&gt;</span> in <span class="ansicyan">func</span><span class="ansiblue">()</span>
 <span class="ansigreen">      2</span> <span class="ansiblue"></span>
 <span class="ansigreen">      3</span> <span class="ansigreen">def</span> func<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
 <span class="ansigreen">----&gt; 4</span><span class="ansired">     </span><span class="ansigreen">print</span><span class="ansiblue">(</span>my_variable<span class="ansiblue">)</span><span class="ansiblue"></span>
@@ -2181,7 +2384,7 @@ x is 2 after function.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">参数默认值</h1>
+<h2 id="-">参数默认值</h2>
 <p>函数定义时，可以给参数一个值。当调用时，该参数并未给出的情况下，使用默认值。</p>
 <p>提示：从安全性角度来说，不要使用可变对象作为参数默认值。</p>
 </div>
@@ -2189,7 +2392,7 @@ x is 2 after function.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">times</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -2224,7 +2427,7 @@ WorldWorldWorldWorldWorld
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">append1</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="p">[]):</span>
@@ -2280,7 +2483,7 @@ WorldWorldWorldWorldWorld
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">append1</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -2329,14 +2532,14 @@ WorldWorldWorldWorldWorld
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">返回值</h1>
+<h2 id="-">返回值</h2>
 <p>将函数内数据传递回去。</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -2379,7 +2582,7 @@ The numbers are equal
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">多值返回</h1>
+<h2 id="-">多值返回</h2>
 <p>Python允许一次返回多个值。</p>
 <p>多值返回的本质是使用tuple中转（后面详细讲解）。</p>
 </div>
@@ -2398,7 +2601,7 @@ The numbers are equal
     </aside>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
@@ -2437,7 +2640,7 @@ The numbers are equal
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="doc-string">Doc string</h1>
+<h2 id="doc-string">Doc String</h2>
 <p>Python允许为每个函数增加一个文档字符串，这个文档字符串可以被代码访问。</p>
 <p>具体方式是，在函数的第一个逻辑行定义一个字符串（不执行任何操作）。</p>
 <p>访问方式是function.__doc__。</p>
@@ -2458,7 +2661,7 @@ The numbers are equal
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -2466,9 +2669,9 @@ The numbers are equal
     <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;is maximum&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{} is maximum&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;is maximum&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{} is maximum&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
 
 <span class="n">print_max</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">print_max</span><span class="o">.</span><span class="n">__doc__</span><span class="p">)</span>
@@ -2485,7 +2688,7 @@ The numbers are equal
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-(5, &apos;is maximum&apos;)
+5 is maximum
 Prints the maximum of two numbers. 
 The two values must be integers.
 
@@ -2503,14 +2706,14 @@ The two values must be integers.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="lambda">lambda</h1>
+<h2 id="lambda">Lambda</h2>
 <p>一种快速定义简单函数的方法。</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">inc</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -2549,7 +2752,7 @@ The two values must be integers.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">练习</h1>
+<h2 id="-">练习</h2>
 <p>定义fib函数。</p>
 <p>输入n，fib的输出为数列第n项的值。</p>
 <p>数列某项等于前两项之和。</p>
@@ -2563,7 +2766,7 @@ The two values must be integers.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>可演示递归和循环算法，比较其特性。说明简洁和快速的矛盾。</p>
-<p>可以在最后使用for循环打印输出，为后面“<strong>main</strong>标准写法”打基础。</p>
+<p>可以在最后使用for循环打印输出，为后面“__main__标准写法”打基础。</p>
 </div>
 </div>
 </div>
@@ -2574,13 +2777,13 @@ The two values must be integers.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -2598,7 +2801,7 @@ The two values must be integers.
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[47]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[53]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2621,7 +2824,17 @@ The two values must be integers.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="module">module</h1>
+<h1 id="-">模块</h1>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="module">Module</h2>
 <p>预先写好的代码，供其他代码使用。</p>
 <p>一个module是一个独立文件。</p>
 <p>每个module拥有自己的全局变量空间。数据定义，函数，均定义在其中。</p>
@@ -2631,7 +2844,7 @@ The two values must be integers.
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> <span class="n">testmod</span><span class="o">.</span><span class="n">py</span>
@@ -2665,6 +2878,35 @@ Writing testmod.py
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="o">!</span>ls -l testmod.py
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+-rw-r--r-- 1 shell shell 111 9月   6 13:03 testmod.py
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -2672,25 +2914,14 @@ Writing testmod.py
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="import">import</h1>
+<h2 id="import">import</h2>
 <p>import引入某个module对象，可使用module.name的方式引用它的全局变量。</p>
 </div>
 </div>
-</div><aside class="notes">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>判定本页的windows和linux兼容性</p>
-</div>
-</div>
-</div>
-    </aside>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">testmod</span>
@@ -2705,7 +2936,7 @@ Writing testmod.py
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[49]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[56]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2726,7 +2957,7 @@ Writing testmod.py
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="from-import">from import</h1>
+<h2 id="from-import">from import</h2>
 <p>from import引入模块中的某个（或全部）变量。</p>
 <p>被引入变量不需要module.name来访问，仅需要name。</p>
 <p>注意：不推荐引入全部变量，会引起名称空间污染。</p>
@@ -2735,7 +2966,7 @@ Writing testmod.py
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">testmod</span> <span class="kn">import</span> <span class="n">varible2</span>
@@ -2750,7 +2981,7 @@ Writing testmod.py
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[57]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2771,14 +3002,14 @@ Writing testmod.py
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="dir">dir</h1>
+<h2 id="dir">dir</h2>
 <p>列出某个模块的所有变量。</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">testmod</span>
@@ -2793,7 +3024,7 @@ Writing testmod.py
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[51]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[58]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2821,7 +3052,7 @@ Writing testmod.py
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">模块预编译</h1>
+<h2 id="-">模块预编译</h2>
 <p>当import时，python会试图去编译出pyc文件来。</p>
 <p>pyc是被编译过的py文件，加载pyc文件可以跳过语法解析过程。</p>
 <p>当py日期新于pyc时，重新生成pyc。所以日期紊乱可能导致执行老代码。</p>
@@ -2844,18 +3075,9 @@ Writing testmod.py
 </div>
     </aside></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">演示</h1>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>ls -l testmod*
@@ -2872,8 +3094,8 @@ Writing testmod.py
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 111 9月   4 14:43 testmod.py
--rw-r--r-- 1 shell shell 333 9月   4 14:43 testmod.pyc
+-rw-r--r-- 1 shell shell 111 9月   6 13:03 testmod.py
+-rw-r--r-- 1 shell shell 333 9月   6 13:03 testmod.pyc
 
 </pre>
 </div>
@@ -2885,7 +3107,7 @@ Writing testmod.py
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>ls -l __pycache__/testmod*
@@ -2911,6 +3133,15 @@ ls: 无法访问&apos;__pycache__/testmod*&apos;: 没有那个文件或目录
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>由于这个系统使用了python2作为基础，因此没有__pycache__。</p>
+</div>
+</div>
 </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -2918,7 +3149,7 @@ ls: 无法访问&apos;__pycache__/testmod*&apos;: 没有那个文件或目录
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-_-_name-_-_-">__name__属性</h1>
+<h2 id="-_-_name-_-_-">__name__属性</h2>
 <p>模块有一个属性，__name__。当这个属性为&#39;__main__&#39;时，说明当前模块被作为脚本运行。</p>
 <p>模块被作为以脚本运行时，不生成pyc文件（因为不是import）。</p>
 </div>
@@ -2926,7 +3157,7 @@ ls: 无法访问&apos;__pycache__/testmod*&apos;: 没有那个文件或目录
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">__name__</span>
@@ -2940,7 +3171,7 @@ ls: 无法访问&apos;__pycache__/testmod*&apos;: 没有那个文件或目录
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[54]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2957,7 +3188,7 @@ ls: 无法访问&apos;__pycache__/testmod*&apos;: 没有那个文件或目录
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">testmod</span><span class="o">.</span><span class="n">__name__</span>
@@ -2971,7 +3202,7 @@ ls: 无法访问&apos;__pycache__/testmod*&apos;: 没有那个文件或目录
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[55]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[62]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2992,13 +3223,13 @@ ls: 无法访问&apos;__pycache__/testmod*&apos;: 没有那个文件或目录
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="main-">main文件模式化写法</h1>
+<h2 id="main-">Main文件模式化写法</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>tail -n <span class="m">2</span> testmod.py
@@ -3027,7 +3258,7 @@ if __name__ == &apos;__main__&apos;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>python testmod.py
@@ -3057,7 +3288,7 @@ run as script
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>rm testmod*
@@ -3075,7 +3306,7 @@ run as script
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="package">package</h1>
+<h2 id="package">package</h2>
 <p>从组织结构上说，package是比modules更大一级的结构。</p>
 <p>一个package里可以包含多个modules和packages。</p>
 <p>一般一个package是一个独立目录，里面有__init__.py文件。</p>
@@ -3100,7 +3331,7 @@ run as script
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">练习</h1>
+<h2 id="-">练习</h2>
 <ul>
 <li>导入系统sys模块</li>
 <li>列出sys模块中以s开头并且以e结尾的成员。</li>
@@ -3125,13 +3356,13 @@ run as script
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -3187,7 +3418,7 @@ settrace
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="list">list</h1>
+<h2 id="list">list</h2>
 <p>具有顺序的一组对象。</p>
 <p>可以随意访问其中的任意位置。</p>
 <p>可以添加和删除。</p>
@@ -3209,21 +3440,25 @@ settrace
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">shoplist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="p">,</span> <span class="s1">&#39;carrot&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">]</span>
+
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;I have {} items to purchase.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">shoplist</span><span class="p">)))</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;These items are: &#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shoplist</span><span class="p">:</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">I also have to buy rice.&#39;</span><span class="p">)</span>
 <span class="n">shoplist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;rice&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;My shopping list is now {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shoplist</span><span class="p">))</span>
+
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;I will sort my list now&#39;</span><span class="p">)</span>
 <span class="n">shoplist</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Sorted shopping list is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shoplist</span><span class="p">))</span>
+
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The first item I will buy is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shoplist</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="n">olditem</span> <span class="o">=</span> <span class="n">shoplist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="k">del</span> <span class="n">shoplist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -3266,7 +3501,7 @@ My shopping list is now [&apos;banana&apos;, &apos;carrot&apos;, &apos;mango&apo
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="tuple">tuple</h1>
+<h2 id="tuple">tuple</h2>
 <p>具有顺序的一组对象。</p>
 <p>可以随意访问其中的任意位置。</p>
 <p>不可以添加和删除。</p>
@@ -3277,7 +3512,7 @@ My shopping list is now [&apos;banana&apos;, &apos;carrot&apos;, &apos;mango&apo
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">zoo</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;elephant&#39;</span><span class="p">,</span> <span class="s1">&#39;penguin&#39;</span><span class="p">)</span>
@@ -3285,6 +3520,7 @@ My shopping list is now [&apos;banana&apos;, &apos;carrot&apos;, &apos;mango&apo
 
 <span class="n">new_zoo</span> <span class="o">=</span> <span class="s1">&#39;monkey&#39;</span><span class="p">,</span> <span class="s1">&#39;camel&#39;</span><span class="p">,</span> <span class="n">zoo</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Number of cages in the new zoo is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">new_zoo</span><span class="p">)))</span>
+
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;All animals in new zoo are {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_zoo</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Animals brought from old zoo are {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_zoo</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Last animal brought from old zoo is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_zoo</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]))</span>
@@ -3320,7 +3556,7 @@ Number of animals in the new zoo is 5
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
@@ -3335,7 +3571,7 @@ Number of animals in the new zoo is 5
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[62]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[69]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3352,7 +3588,7 @@ Number of animals in the new zoo is 5
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">r</span>
@@ -3386,7 +3622,7 @@ Number of animals in the new zoo is 5
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
@@ -3422,7 +3658,7 @@ Number of animals in the new zoo is 5
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">操作序列对象</h1>
+<h2 id="-">操作序列对象</h2>
 <ul>
 <li>通过[]访问</li>
 <li>通过[]设定值</li>
@@ -3437,7 +3673,7 @@ Number of animals in the new zoo is 5
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">shoplist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="p">,</span> <span class="s1">&#39;carrot&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">]</span>
@@ -3449,6 +3685,7 @@ Number of animals in the new zoo is 5
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Item -1 is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shoplist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Item -2 is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shoplist</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]))</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Character 0 is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Item 1 to 3 is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shoplist</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]))</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Item 2 to end is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shoplist</span><span class="p">[</span><span class="mi">2</span><span class="p">:]))</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Item 1 to -1 is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shoplist</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
@@ -3502,7 +3739,7 @@ reversed characters is pooraws
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">练习</h1>
+<h2 id="-">练习</h2>
 <ol>
 <li>建立一个list，内容为10以内的所有质数。</li>
 <li>向这个列表，添加10-100以内的所有质数。最终得到的应该是100内所有质数的列表。</li>
@@ -3530,13 +3767,13 @@ reversed characters is pooraws
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
@@ -3551,7 +3788,7 @@ reversed characters is pooraws
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[66]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[73]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3569,7 +3806,7 @@ reversed characters is pooraws
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
@@ -3607,7 +3844,7 @@ reversed characters is pooraws
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">tuple_primes</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
@@ -3638,7 +3875,7 @@ reversed characters is pooraws
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">tuple_primes</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
@@ -3667,7 +3904,7 @@ reversed characters is pooraws
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">tuple_primes</span><span class="p">)))</span>
@@ -3697,7 +3934,7 @@ reversed characters is pooraws
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># Python2下可以不需要int，因为len结果是整数，整数除法结果是整数。</span>
@@ -3713,7 +3950,7 @@ reversed characters is pooraws
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[71]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[78]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3731,7 +3968,7 @@ reversed characters is pooraws
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">)::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">primes</span><span class="p">[:</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -3745,7 +3982,7 @@ reversed characters is pooraws
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[72]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[79]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3767,13 +4004,13 @@ reversed characters is pooraws
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">列表推导式</h1>
+<h2 id="-">列表推导式</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -3808,7 +4045,7 @@ reversed characters is pooraws
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-2">练习2</h1>
+<h2 id="-">练习</h2>
 <p>思考一下，列表推导式是否能够将素数列表直接实现出来？为什么？</p>
 <p>然后自己测试一下。</p>
 </div>
@@ -3831,7 +4068,7 @@ reversed characters is pooraws
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="dict">dict</h1>
+<h2 id="dict">dict</h2>
 <p>具有一系列成对对象。一个叫做key，一个叫做value。</p>
 <p>无顺序，key不可重复。</p>
 <p>通过其中一个(key)可以唯一确定另外一个(value)，反之未必。</p>
@@ -3844,7 +4081,7 @@ reversed characters is pooraws
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">ab</span> <span class="o">=</span> <span class="p">{</span>
@@ -3853,11 +4090,14 @@ reversed characters is pooraws
     <span class="s1">&#39;Matsumoto&#39;</span><span class="p">:</span> <span class="s1">&#39;matz@ruby-lang.org&#39;</span><span class="p">,</span>
     <span class="s1">&#39;Spammer&#39;</span><span class="p">:</span> <span class="s1">&#39;spammer@hotmail.com&#39;</span>
 <span class="p">}</span>
+
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Swaroop&#39;s address is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Swaroop&#39;</span><span class="p">]))</span>
 <span class="k">del</span> <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Spammer&#39;</span><span class="p">]</span>
+
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;There are {} contacts in the address-book&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ab</span><span class="p">)))</span>
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">address</span> <span class="ow">in</span> <span class="n">ab</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Contact {} at {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">address</span><span class="p">))</span>
+
 <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Guido&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;guido@python.org&#39;</span>
 <span class="k">if</span> <span class="s1">&#39;Guido&#39;</span> <span class="ow">in</span> <span class="n">ab</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Guido&#39;s address is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Guido&#39;</span><span class="p">]))</span>
@@ -3895,7 +4135,7 @@ Guido&apos;s address is guido@python.org
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="set">set</h1>
+<h2 id="set">set</h2>
 <p>具有一组对象。无顺序，不可重复。</p>
 <p>可以添加和删除。</p>
 <p>其中的元素不需要是同类型，但必须是不可变对象。</p>
@@ -3905,7 +4145,7 @@ Guido&apos;s address is guido@python.org
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">bri</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;brazil&#39;</span><span class="p">,</span> <span class="s1">&#39;russia&#39;</span><span class="p">,</span> <span class="s1">&#39;india&#39;</span><span class="p">])</span>
@@ -3921,7 +4161,7 @@ Guido&apos;s address is guido@python.org
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[75]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[82]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3938,7 +4178,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="s1">&#39;usa&#39;</span> <span class="ow">in</span> <span class="n">bri</span>
@@ -3952,7 +4192,7 @@ True
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[76]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[83]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -3969,7 +4209,7 @@ False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">bric</span> <span class="o">=</span> <span class="n">bri</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -3985,7 +4225,7 @@ False
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[77]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[84]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -4002,7 +4242,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">bri</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;russia&#39;</span><span class="p">)</span>
@@ -4017,7 +4257,7 @@ True
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[78]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[85]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -4038,7 +4278,7 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-3">练习3</h1>
+<h2 id="-">练习</h2>
 <p>每个国家都有一定的地区号码，现在我们知道这些国家和地区号码关系：</p>
 <p>+30 希腊 +45 丹麦 +51 秘鲁 +65 新加坡 +86 中国</p>
 <p>写代码求出以下电话号码里面有几个国家：</p>
@@ -4052,13 +4292,13 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">number2country</span> <span class="o">=</span> <span class="p">{</span>
@@ -4108,7 +4348,7 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="string-">string的一些其他方法</h1>
+<h2 id="string-">string的一些其他方法</h2>
 <ul>
 <li>startswith</li>
 <li>endswith</li>
@@ -4122,7 +4362,7 @@ True
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Swaroop&#39;</span>
@@ -4170,13 +4410,6 @@ Brazil_*_Russia_*_India_*_China
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="-">面对对象编程</h1>
-<ul>
-<li>对象</li>
-<li>类</li>
-<li>方法</li>
-<li>数据</li>
-<li>继承</li>
-</ul>
 </div>
 </div>
 </div><aside class="notes">
@@ -4206,14 +4439,14 @@ Brazil_*_Russia_*_India_*_China
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="class">class</h1>
+<h2 id="class">class</h2>
 <p>如何定义类：</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
@@ -4236,7 +4469,7 @@ Brazil_*_Russia_*_India_*_China
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
@@ -4254,7 +4487,7 @@ Brazil_*_Russia_*_India_*_China
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;__main__.Person instance at 0x7fea32cd9440&gt;
+&lt;__main__.Person instance at 0x7fe2440da5f0&gt;
 
 </pre>
 </div>
@@ -4270,14 +4503,14 @@ Brazil_*_Russia_*_India_*_China
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">方法</h1>
+<h2 id="-">方法</h2>
 <p>如何定义类的成员方法：</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
@@ -4315,7 +4548,7 @@ Hello, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">数据</h1>
+<h2 id="-">数据</h2>
 <p>对象里包含的数据。</p>
 <p>可以用.访问。</p>
 <p>和方法的主要差别在于。方法需要使用()来调用，而数据不需要。</p>
@@ -4324,7 +4557,7 @@ Hello, how are you?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
@@ -4336,6 +4569,7 @@ Hello, how are you?
         
 <span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;shell&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">say_hi</span><span class="p">()</span>
 </pre></div>
 
@@ -4350,6 +4584,7 @@ Hello, how are you?
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
+shell
 hello, shell, how are you?
 
 </pre>
@@ -4366,13 +4601,12 @@ hello, shell, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="self">self</h1>
+<h2 id="self">self</h2>
 <p>在python中，成员函数使用”self”来指代对象自身。类似于java和C++中的”this”。</p>
 <p>在调用时，p.say_hi()即可。不需要传递p.say_hi(self)或者p.say_hi(p)。</p>
 <p>在使用时，需要先将self定义为第一个参数。例如def say_hi(self):。</p>
 <p>在函数内使用时，对象的成员需要用self.xx的方式使用，例如self.name。</p>
-<p>self不是关键词，也不是强制名称。它只是函数的第一个参数。</p>
-<p>但是为了保持传统，请不要将他改为其他名称。</p>
+<p>self不是关键词，也不是强制名称。它只是函数的第一个参数。但是为了保持传统，请不要将他改为其他名称。</p>
 </div>
 </div>
 </div></section><section>
@@ -4382,7 +4616,7 @@ hello, shell, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="__init__-"><strong>init</strong>方法</h1>
+<h2 id="-_-_init-_-_-">__init__方法</h2>
 <p>__init__是对象的第一个方法，用于初始化对象数据。</p>
 <p>__init__函数是初始化方法，而非构造方法。</p>
 <p>在__init__函数被调用时，self对象已经创建完毕。</p>
@@ -4395,7 +4629,7 @@ hello, shell, how are you?
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
@@ -4409,8 +4643,11 @@ hello, shell, how are you?
         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;hello, {}, how are you?&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;Swaroop&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">say_hi</span><span class="p">()</span>
+
 <span class="n">p</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;shell&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">say_hi</span><span class="p">()</span>
 </pre></div>
 
@@ -4425,7 +4662,9 @@ hello, shell, how are you?
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
+Swaroop
 hello, Swaroop, how are you?
+shell
 hello, shell, how are you?
 
 </pre>
@@ -4442,7 +4681,7 @@ hello, shell, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">练习</h1>
+<h2 id="-">练习</h2>
 <p>定义一个马克杯类，定义一个加水方法和一个喝水方法。</p>
 </div>
 </div>
@@ -4453,16 +4692,16 @@ hello, shell, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Mug</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Mug</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">def</span> <span class="nf">drink</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
@@ -4482,7 +4721,7 @@ hello, shell, how are you?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">类成员和对象成员</h1>
+<h2 id="-">类成员和对象成员</h2>
 <p>类和对象分别拥有成员，例如数据和方法。</p>
 <p>对象可以引用类成员，例如p.say_hi()。也可以引用对象成员，或者self.name。</p>
 <p>当有重名时优先引用对象成员。</p>
@@ -4504,7 +4743,7 @@ hello, shell, how are you?
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Robot</span><span class="p">:</span>
@@ -4550,7 +4789,7 @@ hello, shell, how are you?
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">droid1</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">(</span><span class="s2">&quot;R2-D2&quot;</span><span class="p">)</span>
@@ -4611,8 +4850,9 @@ We have 0 robots.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-2">练习2</h1>
-<p>思考一下，上一节你的定义里是否考虑了马克杯的“最大容量”。如果没有，请加上。并且思考一下，“最大容量”是对象属性还是类属性，为什么？</p>
+<h2 id="-">练习</h2>
+<p>回想一下，上一节你的定义里是否考虑了马克杯的“最大容量”。如果没有，请加上。</p>
+<p>思考一下，“最大容量”是对象属性还是类属性，为什么？</p>
 </div>
 </div>
 </div></section><section>
@@ -4622,27 +4862,27 @@ We have 0 robots.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Mug</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Mug</span><span class="p">:</span>
     <span class="n">capacity</span> <span class="o">=</span> <span class="mi">300</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">def</span> <span class="nf">drink</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">mass</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">-=</span> <span class="n">mass</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">def</span> <span class="nf">watering</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">+</span> <span class="n">mass</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">+=</span> <span class="n">mass</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span>
 </pre></div>
 
 </div>
@@ -4656,7 +4896,7 @@ We have 0 robots.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">继承</h1>
+<h2 id="-">继承</h2>
 <p>继承关系分为基类和继承类（也叫父类和子类）。</p>
 <p>子类可以继承父类的成员。当子类和父类定义同名成员时，优先引用子类的。</p>
 <p>原则上说，父类能做的事，子类一定能做（虽然行为可能有差异）。父类能出现的地方，子类一定能出现。</p>
@@ -4671,7 +4911,7 @@ We have 0 robots.
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SchoolMember</span><span class="p">:</span>
@@ -4706,7 +4946,7 @@ We have 0 robots.
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">SchoolMember</span><span class="p">):</span>
@@ -4767,7 +5007,7 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-3">练习3</h1>
+<h2 id="-">练习</h2>
 <p>请为马克杯增加一个“添满”方法，可以求出需要添多少水到加满，并自动为杯子加水。</p>
 </div>
 </div>
@@ -4778,27 +5018,31 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Mug</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">capacity</span> <span class="o">=</span> <span class="mi">300</span>
+
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="mi">0</span>
+
     <span class="k">def</span> <span class="nf">drink</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">mass</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">-=</span> <span class="n">mass</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="mi">0</span>
+
     <span class="k">def</span> <span class="nf">watering</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">+</span> <span class="n">mass</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">+=</span> <span class="n">mass</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span>
+
     <span class="k">def</span> <span class="nf">full</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">mass</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">watering</span><span class="p">(</span><span class="n">mass</span><span class="p">)</span>
@@ -4815,7 +5059,7 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-4">练习4</h1>
+<h2 id="-">练习</h2>
 <p>请定义一个运动杯类，并同样实现“喝水”，“加水”和“添满”方法。</p>
 </div>
 </div>
@@ -4826,8 +5070,9 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-5">练习5</h1>
-<p>考虑一下，“马克杯”和“运动杯”的“添满”行为是否一样，两边是否可以重用“添满”？</p>
+<h2 id="-">练习</h2>
+<p>考虑一下，如果“马克杯”和“运动杯”的“喝水”和“添水”行为是不一样的。</p>
+<p>那么，“添满”行为是否一样，两边是否可以重用“添满”？</p>
 <p>如果可以，怎么做？</p>
 </div>
 </div>
@@ -4838,43 +5083,49 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cup</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="mi">0</span>
+
     <span class="k">def</span> <span class="nf">full</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">mass</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">watering</span><span class="p">(</span><span class="n">mass</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">Mug</span><span class="p">(</span><span class="n">Cup</span><span class="p">):</span>
     <span class="n">capacity</span> <span class="o">=</span> <span class="mi">300</span>
+
     <span class="k">def</span> <span class="nf">drink</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">mass</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">-=</span> <span class="n">mass</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="mi">0</span>
+
     <span class="k">def</span> <span class="nf">watering</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">+</span> <span class="n">mass</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">+=</span> <span class="n">mass</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span>
 
 <span class="k">class</span> <span class="nc">SportBottle</span><span class="p">(</span><span class="n">Cup</span><span class="p">):</span>
     <span class="n">capacity</span> <span class="o">=</span> <span class="mi">500</span>
+
     <span class="k">def</span> <span class="nf">drink</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">mass</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">-=</span> <span class="n">mass</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="mi">0</span>
+
     <span class="k">def</span> <span class="nf">watering</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">+</span> <span class="n">mass</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">+=</span> <span class="n">mass</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">water</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span>
 </pre></div>
 
 </div>
@@ -4885,7 +5136,7 @@ Marks: &quot;75&quot;
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">Mug</span><span class="p">()</span>
@@ -4929,7 +5180,17 @@ Marks: &quot;75&quot;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">从命令行输入</h1>
+<h1 id="-">输入输出</h1>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">从命令行输入</h2>
 <p>python3使用input从命令行输入。python2使用raw_input从命令行输入。</p>
 <p>两者参数一致，都是一个提示字符串。</p>
 <p>在python2中，input是eval(input)，有安全性问题。</p>
@@ -4939,18 +5200,22 @@ Marks: &quot;75&quot;
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1">#Rise to vote, sir.</span>
+
 <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">text</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
 <span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">text</span> <span class="o">==</span> <span class="n">reverse</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
 <span class="k">try</span><span class="p">:</span>
     <span class="n">something</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Enter text: &quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
     <span class="n">something</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter text: &quot;</span><span class="p">)</span>
+
 <span class="k">if</span> <span class="n">is_palindrome</span><span class="p">(</span><span class="n">something</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Yes, it is a palindrome&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -4985,7 +5250,7 @@ No, it is not a palindrome
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">练习</h1>
+<h2 id="-">练习</h2>
 <p>刚刚的回文字符串程序只能检测纯粹的字符串，真正的回文字符检测程序应当能够处理标点，空格和大小写。</p>
 <p>例如&quot;Rise to vote, sir.&quot;实际上也是回文字符串，但是刚刚的程序判定他不是。</p>
 <p>请写出一个新的版本。</p>
@@ -4999,27 +5264,30 @@ No, it is not a palindrome
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">答案</h1>
+<h2 id="-">答案</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">text</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
 <span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">text</span> <span class="o">==</span> <span class="n">reverse</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
 <span class="k">try</span><span class="p">:</span>
     <span class="n">something</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Enter text: &quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
     <span class="n">something</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter text: &quot;</span><span class="p">)</span>
+
 <span class="k">if</span> <span class="n">is_palindrome</span><span class="p">(</span><span class="n">something</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Yes, it is a palindrome&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -5054,7 +5322,7 @@ Yes, it is a palindrome
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">从文件中输入输出</h1>
+<h2 id="-">从文件中输入输出</h2>
 <p>使用open打开文件进行读写。调用方法和C的fopen类似。</p>
 </div>
 </div>
@@ -5062,7 +5330,7 @@ Yes, it is a palindrome
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -5075,6 +5343,7 @@ Yes, it is a palindrome
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;poem.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
 <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">poem</span><span class="p">)</span>
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;poem.txt&#39;</span><span class="p">)</span>
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
     <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
@@ -5111,7 +5380,7 @@ if you wanna make your work also fun:
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>ls -l poem.txt
@@ -5128,7 +5397,7 @@ if you wanna make your work also fun:
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 95 9月   4 14:43 poem.txt
+-rw-r--r-- 1 shell shell 95 9月   6 13:03 poem.txt
 
 </pre>
 </div>
@@ -5140,7 +5409,7 @@ if you wanna make your work also fun:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="o">!</span>cat poem.txt
@@ -5185,13 +5454,15 @@ if you wanna make your work also fun:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="with">with</h1>
+<h2 id="with">with</h2>
+<p>with可以在推出区块时自动关闭文件，而且对异常安全（异常在下一节讲）。</p>
+<p>with不仅可以用于文件，而且可以用于很多需要在离开区域时自动关闭的对象，例如锁。</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -5223,7 +5494,24 @@ if you wanna make your work also fun:
 </div>
 </div>
 
-</div></section><section>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="o">!</span>rm -f poem.txt
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -5231,8 +5519,19 @@ if you wanna make your work also fun:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="-">异常</h1>
-<p>Python允许在出现错误的时候，“抛”出特定错误。错误按照调用顺序依次向上找，找到第一个合适的处理方法对错误进行处理。
-如果无人处理错误，则程序崩溃。这种错误处理机制允许调用者对函数深层的错误进行容错，同时中间所有代码对这个过程无需干预。</p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">简介</h2>
+<p>Python允许在出现错误的时候，“抛”出这个错误。</p>
+<p>错误按照调用顺序依次向上找，找到第一个合适的处理方法对错误进行处理。如果无人处理错误，则程序崩溃。</p>
+<p>这种错误处理机制允许调用者对函数深层的错误进行容错，同时中间所有代码对这个过程无需干预。</p>
 <pre><code>&gt;&gt;&gt; Print(&quot;Hello World&quot;)
 Traceback (most recent call last):
   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
@@ -5246,7 +5545,7 @@ Hello World
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
@@ -5265,7 +5564,7 @@ Hello World
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">NameError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-101-4a9fe39e6a16&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-109-4a9fe39e6a16&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>Print<span class="ansiblue">(</span><span class="ansiblue">&quot;Hello World&quot;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 
 <span class="ansired">NameError</span>: name &apos;Print&apos; is not defined</pre>
@@ -5278,7 +5577,7 @@ Hello World
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
@@ -5311,7 +5610,8 @@ Hello World
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">异常输出阅读</h1>
+<h2 id="-">异常输出阅读</h2>
+<p>python的大多数错误会伴随抛出异常。因此，为了解决日常在使用中碰到的种种问题，我们需要学会如何阅读异常。</p>
 <p>异常输出通常和函数的调用顺序相同，和栈的顺序相反。</p>
 <p>最上层的调用（最先发生的）在最上面，最后执行到的地方在最下面。最后一个异常行就是一场发生的精确地点。</p>
 <p>最后一行是异常的名字和参数。</p>
@@ -5321,7 +5621,7 @@ Hello World
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">layer1</span><span class="p">():</span>
@@ -5359,19 +5659,19 @@ layer2 called
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">Exception</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-103-22bfd87adf46&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-111-22bfd87adf46&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">      8</span>     <span class="ansigreen">return</span> <span class="ansicyan">1</span><span class="ansiblue"></span>
 <span class="ansigreen">      9</span> <span class="ansiblue"></span>
 <span class="ansigreen">---&gt; 10</span><span class="ansired"> </span><span class="ansigreen">print</span><span class="ansiblue">(</span>layer1<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 
-<span class="ansigreen">&lt;ipython-input-103-22bfd87adf46&gt;</span> in <span class="ansicyan">layer1</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-111-22bfd87adf46&gt;</span> in <span class="ansicyan">layer1</span><span class="ansiblue">()</span>
 <span class="ansigreen">      1</span> <span class="ansigreen">def</span> layer1<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
 <span class="ansigreen">      2</span>     <span class="ansigreen">print</span><span class="ansiblue">(</span><span class="ansiblue">&apos;layer1 called&apos;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 <span class="ansigreen">----&gt; 3</span><span class="ansired">     </span><span class="ansigreen">return</span> layer2<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 <span class="ansigreen">      4</span> <span class="ansiblue"></span>
 <span class="ansigreen">      5</span> <span class="ansigreen">def</span> layer2<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
 
-<span class="ansigreen">&lt;ipython-input-103-22bfd87adf46&gt;</span> in <span class="ansicyan">layer2</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-111-22bfd87adf46&gt;</span> in <span class="ansicyan">layer2</span><span class="ansiblue">()</span>
 <span class="ansigreen">      5</span> <span class="ansigreen">def</span> layer2<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
 <span class="ansigreen">      6</span>     <span class="ansigreen">print</span><span class="ansiblue">(</span><span class="ansiblue">&apos;layer2 called&apos;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 <span class="ansigreen">----&gt; 7</span><span class="ansired">     </span><span class="ansigreen">raise</span> Exception<span class="ansiblue">(</span><span class="ansiblue">&apos;arg1&apos;</span><span class="ansiblue">,</span> <span class="ansicyan">2</span><span class="ansiblue">)</span><span class="ansiblue"></span>
@@ -5392,7 +5692,7 @@ layer2 called
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">异常处理</h1>
+<h2 id="-">异常处理</h2>
 <p>常规异常处理代码段需要包含三部分内容：被监管代码体，错误类型和异常处理代码体。</p>
 <p>当被监管代码体中发生异常时，异常被向上抛出。</p>
 <p>向上寻找处理函数的异常属于定义的这个错误类的子类时，异常处理代码体被调用。</p>
@@ -5403,21 +5703,19 @@ layer2 called
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="c1"># 由于ipython的限制，这个需要开命令行演示。</span>
+<div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter something --&gt; &#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter something --&gt; &#39;</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter something --&gt; &#39;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter something --&gt; &#39;</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">EOFError</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Why did you do an EOF on me?&#39;</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;You cancelled the operation.&#39;</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Illegal number&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;You entered {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -5431,8 +5729,8 @@ layer2 called
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-Enter something --&gt; 1
-You entered 1
+Enter something --&gt; abc
+Illegal number
 
 </pre>
 </div>
@@ -5448,7 +5746,7 @@ You entered 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">常见异常</h1>
+<h2 id="-">常见异常</h2>
 <ul>
 <li>AttributeError</li>
 <li>ImportError</li>
@@ -5469,13 +5767,13 @@ You entered 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">抛出异常</h1>
+<h2 id="-">抛出异常</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
@@ -5509,34 +5807,24 @@ actually not
 </div>
 </div>
 
-</div><aside class="notes">
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>101不需要学习如何自定义异常，因此抛出的是内置异常。在102中需要学习为什么这是一个不好的行为。</p>
-</div>
-</div>
-</div>
-    </aside></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">自定义异常</h1>
+<h2 id="-">自定义异常</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ShortInputException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="c1"># 必须自Exception中继承</span>
+<span class="k">class</span> <span class="nc">ShortInputException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;A user-defined exception class.&#39;&#39;&#39;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">atleast</span><span class="p">):</span>
         <span class="ne">Exception</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -5551,7 +5839,7 @@ actually not
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -5561,12 +5849,9 @@ actually not
         <span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter something --&gt; &#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
         <span class="k">raise</span> <span class="n">ShortInputException</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">EOFError</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Why did you do an EOF on me?&#39;</span><span class="p">)</span>
 <span class="k">except</span> <span class="n">ShortInputException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">((</span><span class="s1">&#39;ShortInputException: The input was &#39;</span> <span class="o">+</span>
-           <span class="s1">&#39;{0} long, expected at least {1}&#39;</span><span class="p">)</span>
-          <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">atleast</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span>
+        <span class="s1">&#39;ShortInputException: The input was {0} long, expected at least {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">atleast</span><span class="p">))</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;No exception was raised.&#39;</span><span class="p">)</span>
 </pre></div>
@@ -5582,8 +5867,8 @@ actually not
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-Enter something --&gt; 1
-ShortInputException: The input was 1 long, expected at least 3
+Enter something --&gt; abc
+No exception was raised.
 
 </pre>
 </div>
@@ -5599,7 +5884,7 @@ ShortInputException: The input was 1 long, expected at least 3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="finally">finally</h1>
+<h2 id="finally">finally</h2>
 <p>finally用于“无论是异常还是正常，以下内容必然被执行”的情况。</p>
 <p>多用于清理。</p>
 </div>
@@ -5608,33 +5893,21 @@ ShortInputException: The input was 1 long, expected at least 3
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="n">f</span> <span class="o">=</span> <span class="bp">None</span>
+<div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter something --&gt; &#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter something --&gt; &#39;</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;poem.txt&quot;</span><span class="p">)</span>
-    <span class="c1"># Our usual file-reading idiom</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">break</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Press ctrl+c now&quot;</span><span class="p">)</span>
-        <span class="c1"># To make sure it runs for a while</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Could not find file poem.txt&quot;</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;!! You cancelled the reading from the file.&quot;</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Illegal number&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">finally</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;(Cleaning up: Closed the file)&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;(clean up here)&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -5648,15 +5921,9 @@ ShortInputException: The input was 1 long, expected at least 3
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-Programming is fun
-Press ctrl+c now
-When the work is done
-Press ctrl+c now
-if you wanna make your work also fun:
-Press ctrl+c now
-    use Python!
-Press ctrl+c now
-(Cleaning up: Closed the file)
+Enter something --&gt; abc
+Illegal number
+(clean up here)
 
 </pre>
 </div>
@@ -5665,35 +5932,20 @@ Press ctrl+c now
 </div>
 </div>
 
-</div><div style=display:none>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span></span><span class="o">!</span>rm poem.txt
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-    </div></section><section>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="assert">assert</h1>
+<h2 id="assert">assert</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;of course&#39;</span><span class="p">)</span>
@@ -5712,7 +5964,7 @@ Press ctrl+c now
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">AssertionError</span>                            Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-110-53f9edc366b8&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-117-53f9edc366b8&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">----&gt; 1</span><span class="ansired"> </span><span class="ansigreen">assert</span> <span class="ansicyan">1</span> <span class="ansiblue">==</span> <span class="ansicyan">0</span><span class="ansiblue">,</span> Exception<span class="ansiblue">(</span><span class="ansiblue">&apos;of course&apos;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 
 <span class="ansired">AssertionError</span>: of course</pre>
@@ -5731,7 +5983,17 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">文档获得和查阅</h1>
+<h1 id="-">文档</h1>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">文档获得和查阅</h2>
 <p>在线文档：</p>
 <p><a href="https://docs.python.org/2/">https://docs.python.org/2/</a></p>
 <p><a href="https://docs.python.org/3/">https://docs.python.org/3/</a> </p>
@@ -5748,7 +6010,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">练习</h1>
+<h2 id="-">练习</h2>
 <p>打开文档，请查阅itertools.permutations的意义，参数，返回值，用法，注意要点等信息。并向大家解释。</p>
 </div>
 </div>
@@ -5759,11 +6021,23 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">第三方文档查询</h1>
+<h2 id="-">第三方文档查询</h2>
 <p>没有什么固定方法。</p>
 <p>在google（注意，不是baidu）上搜索关键词。找一个比较像的官网。找到文档。</p>
 <p>可以参考pypi，很多第三方库可以在上面找到。里面往往带有文档地址。</p>
 <p>缺点是，pypi上搜出来的重名库太多，很难搞清楚哪个才是你要的。</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="python2-python3-">Python2和Python3的差异</h1>
 </div>
 </div>
 </div></section><section>
@@ -5773,14 +6047,33 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python2-python3-">python2和python3的差异</h1>
-<p>python2和python3有很多细节差异。但是大致来说，最主要的差异有以下三项。</p>
+<h2 id="-">简述</h2>
+<p>Python2中有很多固有的设计问题，例如：</p>
 <ol>
-<li>python2的print由关键字改为了函数。因此print ‘xxx’的写法就不合法了。</li>
-<li>在python3中，所有的字符串默认都是unicode。要处理原生数据需要用bytes。</li>
-<li>python3中/不是整数除法。</li>
+<li>print是内置关键词。一般来说，关键词越少越好，因为关键词越少，语言的内核越简洁。</li>
+<li>混同了bytes和unicode。</li>
+<li>/是整数除法。</li>
 </ol>
-<p>在下面这个连接里，收录了python2和python3的其他一些细节差异。</p>
+<p>这些问题在Python3中逐步给予了修复。</p>
+<p>常规来说，修复问题最重要的是“向下兼容，逐步进行”。</p>
+<p>然而上述问题几乎全部都是语言本质问题，不对语言进行伤筋动骨的大改是没有办法修复的。</p>
+<p>因此Python3的预订是“不和Python2兼容”，这造成了Python社区目前2/3分裂的现状。</p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python2和Python3有很多细节差异。但是大致来说，最主要就是上面提到的三项。</p>
+<ol>
+<li>Python2的print由关键字改为了函数。因此print ‘xxx’的写法就不合法了。</li>
+<li>在Python3中，所有的字符串默认都是unicode。要处理原生数据需要用bytes。因此很多在Python2中能够很方便就处理过去的地方需要仔细思考是unicode还是bytes。</li>
+<li>Python3中/不是整数除法。</li>
+</ol>
+<p>在下面这个连接里，收录了Python2和Python3的其他一些细节差异。</p>
 <p><a href="https://wiki.python.org/moin/Python2orPython3">https://wiki.python.org/moin/Python2orPython3</a></p>
 </div>
 </div>
@@ -5791,11 +6084,11 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="python2-3-">python2到3迁移</h1>
-<p>python3带有2to3脚本，可以完成很多项目的迁移。</p>
+<h2 id="python2-3-">Python2到3迁移</h2>
+<p>Python3带有2to3脚本，可以完成很多项目的迁移。</p>
 <p>但是对于某些情况，他仍然不能自动的完成所有工作。</p>
-<p>2到3迁移的主要问题在于，目前有很多库，仍然没有完成python3的迁移工作。</p>
-<p>这导致使用这些库编写的程序很难在python3上找到更好的（或者更习惯的）替代产品。</p>
+<p>2到3迁移的主要问题在于，目前有很多库，仍然没有完成Python3的迁移工作。这导致使用这些库编写的程序很难在Python3上找到更好的（或者更习惯的）替代产品。</p>
+<p>而这件事情是2to3脚本无法自动完成的。</p>
 </div>
 </div>
 </div></section><section>
@@ -5805,12 +6098,27 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">我该用哪个版本/哪个更好</h1>
+<h2 id="-">我该用哪个版本/哪个更好</h2>
 <p>任何能让你不添加额外的麻烦把工作做下来的版本都是好的。</p>
-<p>如果python2和python3一样好，那么python3更好。</p>
+<p>如果Python2和Python3一样好，那么Python3更好。</p>
+<p>因为很显然，Python社区已经宣布Python2将停止维护。在可见的时间内，显然都要使用Python3的写法。</p>
+<p>如果能够不添加额外麻烦的情况下使用Python3，这可能为将来的维护带来便利。</p>
 </div>
 </div>
-</div></section>
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>如果你正在维护一个现有的Python3代码（自己写的，或者接手的）。在没有明确问题的情况下，不建议做2to3移植。</p>
+<p>因为移植需要成本，而项目有生存周期。很难保证项目一定能够活到非迁不可那一天。等到这天来临时才进行迁移一定是成本最小的。</p>
+<p>当然，如果依赖你的代码的人有Python3迁移问题，这明显就是一个必须移植的情况了。</p>
+</div>
+</div>
+</div>
+    </aside></section>
     </section><section>
     <section>
     
@@ -5834,7 +6142,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="setuptools">setuptools</h1>
+<h2 id="setuptools">setuptools</h2>
 <p>系统中必须安装了setuptools（请咨询管理员安装），或者使用以下指令安装：</p>
 <p>Linux:</p>
 <pre><code>wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
@@ -5850,7 +6158,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="setuptools-">setuptools的使用</h1>
+<h2 id="setuptools-">setuptools的使用</h2>
 <ol>
 <li>easy_install 包名</li>
 <li>easy_install 安装包路径。（路径可以填写一个url，系统会从网络上下载安装）</li>
@@ -5866,7 +6174,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pip">pip</h1>
+<h2 id="pip">pip</h2>
 <p>系统中必须有pip，具体请咨询管理员。或者下载该文件：</p>
 <p><a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a></p>
 <p>使用python执行安装（注意需要管理员权限）。</p>
@@ -5879,7 +6187,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pip-">pip的使用</h1>
+<h2 id="pip-">pip的使用</h2>
 <ol>
 <li>pip install 包名</li>
 <li>pip install -r requirements.txt （自动处理里面的所有依赖）</li>
@@ -5893,7 +6201,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="virtualenv">virtualenv</h1>
+<h2 id="virtualenv">virtualenv</h2>
 <p>功能：用于隔离出一套独立的环境，可以在里面安装各种包，而不对系统造成影响。</p>
 <p>使用场景：可以在用户目录中安装包，无需系统权限。也可以隔离多个环境，安装不同版本的不同程序。</p>
 <p>限制：virtualenv本身，及其依赖的Python是无法隔离的。</p>
@@ -5906,7 +6214,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="virtualenv-">virtualenv的使用</h1>
+<h2 id="virtualenv-">virtualenv的使用</h2>
 <p>建立环境：virtualenv 目录名</p>
 <p>激活环境：进入目录后执行source bin/activate</p>
 <p>退出激活环境：deactivate</p>
@@ -5921,7 +6229,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">访问系统库</h1>
+<h2 id="-">访问系统库</h2>
 <p>如果在使用virtualenv的同时，也想使用系统中安装的库。那么需要在创建环境时用--system-site-packages参数。</p>
 <p>从工程管理角度，我们不推荐这种办法。建议将系统中的所有库在虚环境中再安装一次。</p>
 </div>
@@ -5933,7 +6241,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">虚拟环境的发布</h1>
+<h2 id="-">虚拟环境的发布</h2>
 <p>使用virtualenv生成的虚拟环境可以迁移到其他机器上，从而允许将运行环境在多台机器上迁移。但是需要注意以下事项：</p>
 <ul>
 <li>virtualenv依赖于目录工作，所以所有机器上virtualenv必须处于同一路径下。</li>
@@ -5949,7 +6257,7 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">更进一步资料</h1>
+<h2 id="-">更进一步资料</h2>
 <p>请参考这里：</p>
 <p><a href="https://virtualenv.pypa.io/en/stable/userguide/">https://virtualenv.pypa.io/en/stable/userguide/</a></p>
 </div>
@@ -5961,25 +6269,14 @@ Press ctrl+c now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-">软件包安装和管理建议</h1>
+<h2 id="-">软件包安装和管理建议</h2>
 <p>Python默认情况下会试图将软件包安装到系统里，如果不具备管理员权限，需要使用virtualenv来安装软件包。</p>
 <p>对于Debian/Ubuntu而言，安装软件的第一选择是apt系统。如果找不到包，或版本不对，建议采用virtualenv + pip的方式安装。</p>
 <p>对于RHEL/CentOS而言，安装软件的第一选择是yum系统。如果找不到包，或版本不对，建议采用virtualenv + pip的方式安装。</p>
 <p>对于Windows/MacOS而言，建议使用virtualenv + pip的方式安装。</p>
 </div>
 </div>
-</div><aside class="notes">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>在此处演示linux下，预先安装好virtualenv的情况下，生成虚拟环境，并pip安装django的过程。并解释说明对系统无影响。</p>
-</div>
-</div>
-</div>
-    </aside></section>
+</div></section>
     </section>
 </div>
 </div>
