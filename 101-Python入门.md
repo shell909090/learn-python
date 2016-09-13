@@ -32,23 +32,23 @@
   * 逻辑行和物理行
   * 格式对齐
   * 单行写法
-  * If
-  * While
-  * For
-  * Break
-  * Continue
+  * if
+  * while
+  * for
+  * break
+  * continue
 * 函数
   * 函数定义和调用
   * 参数
   * 局部变量
   * 全局变量
   * 作用域
-  * unbound异常
+  * Unbound异常
   * 参数默认值
   * 返回值
   * 多值返回
   * Doc String
-  * Lambda
+  * lambda
 * 模块
   * Module
   * import
@@ -65,7 +65,7 @@
   * 列表推导式
   * dict
   * set
-  * string
+  * string的一些其他方法
 * 面对对象编程
   * class
   * 方法
@@ -79,7 +79,7 @@
   * 从文件中输入输出
   * with
 * 异常
-  * 异常
+  * 简介
   * 异常输出阅读
   * 异常处理
   * 常见异常
