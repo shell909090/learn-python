@@ -1429,7 +1429,7 @@ Wall time: 81.1 µs
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="map-filter-for-">map/filter，列表推导式和for循环的比较</h2>
 <p>三者都可以完成对list操作的特定功能，例如筛选出其中某些值，将其中的值转换为另一个值。但是三者在便利程度和使用细节上略有不同。</p>
-<p>map/filter和列表推导式比较间断，适用于相对不是很复杂的情况。真正复杂的情况需要用for来展开。</p>
+<p>map/filter和列表推导式比较简短，适用于相对不是很复杂的情况。真正复杂的情况需要用for来展开。</p>
 <p>map/filter和列表推导式基本假定是“运算不彼此干扰”。即运算某个元素时，不受到其他元素的影响。for没有这一假定，某元素运算时可以受到另一个元素影响。</p>
 <p>一般来说列表推导式比map/filter更简洁一些，因为map/filter需要定义lambda。但是在已经拥有现成函数的前提下，map/filter更加方便一些。</p>
 </div>
@@ -4623,7 +4623,7 @@ FAILED (failures=1)
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>函数名建议全小写。如果有助于阅读，可以用<em>。如果和关键字冲突，一般会改个名字或者在后面加</em>。</li>
+<li>函数名建议全小写。如果有助于阅读，可以用_。如果和关键字冲突，一般会改个名字或者在后面加_。</li>
 <li>内部使用的全局变量名规则同函数名。</li>
 <li>始终用self来指代对象本身，使用cls来指代类本身。</li>
 <li>常量始终全大写。</li>
@@ -5483,7 +5483,170 @@ let g:pydiction_location = &#39;~/.vim/tools/pydiction/complete-dict&#39;
 </ul>
 </div>
 </div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2-3-">2/3兼容技巧</h1>
+<p>3基本下行兼容2，2不兼容3。所以2/3兼容的基本思想就是遵循3的编写规范，同时兼顾2。</p>
+</div>
+</div>
 </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">基本兼容性技巧</h2>
+<p>在Python文件的开始，增加以下内容（注意按照pep-8，应该放在什么位置）：</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">unicode_literals</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这会改变几个关键性的兼容性标志。主要是print变为函数，string变为unicode。</p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">编码</h2>
+<p>虽然future技巧修正了内嵌字符串，但是对于str和unicode对象而言，并没有什么变化。因此建议在需要的头部如此定义：</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="o">.</span><span class="n">major</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">unicode</span> <span class="o">=</span> <span class="nb">str</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">bytes</span> <span class="o">=</span> <span class="nb">str</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python2中定义str为裸数据，unicode为字符串，bytes没有定义。Python3中定义bytes为裸数据，str为unicode字符串，unicode没有定义。在如此定义后，可以在2/3中，统一使用bytes表示裸数据，用unicode表示字符串。</p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>同时，在代码中，应该对所有试图表现裸数据语义的代码内嵌字符串对象，加b前缀。对所有试图表达字符串语义的代码内嵌字符串对象，加u前缀。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;hello, world&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">u&#39;hello, world&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+hello, world
+hello, world
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>原则上，应对所有内嵌字符串对象都添加b或u前缀，以明确代码中的每一处内嵌字符串的语义。但是实际上这会大大增加工作量，而且工程实践上并没有特别大的优势。因此往往有所折衷，只在需要澄清的地方增加前缀。其他地方可以含混带过，等需要时再修改。</p>
+<p>但是要注意到，项目越大，往往越难于根据后果追查出是哪个含混带过造成的问题。这里需要小心取舍。</p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="io">IO</h2>
+<p>Python3下文件打开时要注意是打开为二进制，还是打开为文本。即打开时的b标志位，决定了读写时应使用裸数据还是字符串。如果使用文本方式打开，还需注意编码。</p>
+<p>Python2下没有encoding参数，因此出于兼容考虑，建议使用codecs.open。这个调用在Python2/3下的语义是一致的。</p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-">其余细节</h2>
+<ul>
+<li>将xrange改为range。当然，作为代价，在python2下，range的效率很有问题。</li>
+<li>urllib.quote和unquote改为了urllib.parse.quote和unquote。</li>
+<li>某些库，在python2和python3下行为不一致，例如csv。对于这些库，尽量不要折腾兼容性。直接针对Python2/3做两种不同代码更方便。</li>
+<li>使用next(it)而不是it.next()。</li>
+</ul>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
