@@ -2966,7 +2966,7 @@ Writing testmod.py
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 111 10月 28 20:00 testmod.py
+-rw-r--r-- 1 shell shell 111 10月 28 20:06 testmod.py
 
 </pre>
 </div>
@@ -3171,8 +3171,8 @@ Writing testmod.py
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 111 10月 28 20:00 testmod.py
--rw-r--r-- 1 shell shell 333 10月 28 20:00 testmod.pyc
+-rw-r--r-- 1 shell shell 111 10月 28 20:06 testmod.py
+-rw-r--r-- 1 shell shell 333 10月 28 20:06 testmod.pyc
 
 </pre>
 </div>
@@ -4705,7 +4705,7 @@ filtered and mapped: 中国, 新加坡, 秘鲁, 希腊, 新加坡, 希腊, 中�
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;__main__.Person instance at 0x7f2bac0b0128&gt;
+&lt;__main__.Person instance at 0x7f7fbc419128&gt;
 
 </pre>
 </div>
@@ -5625,7 +5625,7 @@ if you wanna make your work also fun:
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
--rw-r--r-- 1 shell shell 95 10月 28 20:00 poem.txt
+-rw-r--r-- 1 shell shell 95 10月 28 20:07 poem.txt
 
 </pre>
 </div>
@@ -5675,69 +5675,7 @@ if you wanna make your work also fun:
 <p>以上皆是linux指令，因此不能（也不需要）在windows上执行。windows上对应的行为为dir，type，和del。</p>
 </div>
 </div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="with">with</h2>
-<p>with可以在推出区块时自动关闭文件，而且对异常安全（异常在下一节讲）。</p>
-<p>with不仅可以用于文件，而且可以用于很多需要在离开区域时自动关闭的对象，例如锁。</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;poem.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Programming is fun
-When the work is done
-if you wanna make your work also fun:
-    use Python!
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div style=display:none>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span></span><span class="o">!</span>rm -f poem.txt
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-    </div></section>
+</div></section>
     </section><section>
     <section>
     
@@ -5773,7 +5711,7 @@ Hello World
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
@@ -5792,7 +5730,7 @@ Hello World
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">NameError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-113-4a9fe39e6a16&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-111-4a9fe39e6a16&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>Print<span class="ansiblue">(</span><span class="ansiblue">&quot;Hello World&quot;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 
 <span class="ansired">NameError</span>: name &apos;Print&apos; is not defined</pre>
@@ -5805,7 +5743,7 @@ Hello World
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
@@ -5841,7 +5779,7 @@ Hello World
 <h2 id="-">异常输出阅读</h2>
 <p>python的大多数错误会伴随抛出异常。因此，为了解决日常在使用中碰到的种种问题，我们需要学会如何阅读异常。</p>
 <p>异常输出通常和函数的调用顺序相同，和栈的顺序相反。</p>
-<p>最上层的调用（最先发生的）在最上面，最后执行到的地方在最下面。最后一个异常行就是一场发生的精确地点。</p>
+<p>最上层的调用（最先发生的）在最上面，最后执行到的地方在最下面。最后一个异常行就是异常发生的精确地点。</p>
 <p>最后一行是异常的名字和参数。</p>
 </div>
 </div>
@@ -5849,7 +5787,7 @@ Hello World
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">layer1</span><span class="p">():</span>
@@ -5887,19 +5825,19 @@ layer2 called
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">Exception</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-115-22bfd87adf46&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-113-22bfd87adf46&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">      8</span>     <span class="ansigreen">return</span> <span class="ansicyan">1</span><span class="ansiblue"></span>
 <span class="ansigreen">      9</span> <span class="ansiblue"></span>
 <span class="ansigreen">---&gt; 10</span><span class="ansired"> </span><span class="ansigreen">print</span><span class="ansiblue">(</span>layer1<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 
-<span class="ansigreen">&lt;ipython-input-115-22bfd87adf46&gt;</span> in <span class="ansicyan">layer1</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-113-22bfd87adf46&gt;</span> in <span class="ansicyan">layer1</span><span class="ansiblue">()</span>
 <span class="ansigreen">      1</span> <span class="ansigreen">def</span> layer1<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
 <span class="ansigreen">      2</span>     <span class="ansigreen">print</span><span class="ansiblue">(</span><span class="ansiblue">&apos;layer1 called&apos;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 <span class="ansigreen">----&gt; 3</span><span class="ansired">     </span><span class="ansigreen">return</span> layer2<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 <span class="ansigreen">      4</span> <span class="ansiblue"></span>
 <span class="ansigreen">      5</span> <span class="ansigreen">def</span> layer2<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
 
-<span class="ansigreen">&lt;ipython-input-115-22bfd87adf46&gt;</span> in <span class="ansicyan">layer2</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-113-22bfd87adf46&gt;</span> in <span class="ansicyan">layer2</span><span class="ansiblue">()</span>
 <span class="ansigreen">      5</span> <span class="ansigreen">def</span> layer2<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue">:</span><span class="ansiblue"></span>
 <span class="ansigreen">      6</span>     <span class="ansigreen">print</span><span class="ansiblue">(</span><span class="ansiblue">&apos;layer2 called&apos;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
 <span class="ansigreen">----&gt; 7</span><span class="ansired">     </span><span class="ansigreen">raise</span> Exception<span class="ansiblue">(</span><span class="ansiblue">&apos;arg1&apos;</span><span class="ansiblue">,</span> <span class="ansicyan">2</span><span class="ansiblue">)</span><span class="ansiblue"></span>
@@ -5931,7 +5869,7 @@ layer2 called
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -6002,7 +5940,7 @@ Illegal number
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
@@ -6049,7 +5987,7 @@ actually not
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="c1"># 必须自Exception中继承</span>
@@ -6068,7 +6006,7 @@ actually not
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -6124,7 +6062,7 @@ ShortInputException: The input was 1 long, expected at least 3
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -6165,6 +6103,68 @@ Illegal number
 </div>
 
 </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="with">with</h2>
+<p>with可以在推出区块时自动关闭文件，而且对异常安全（异常在下一节讲）。</p>
+<p>with不仅可以用于文件，而且可以用于很多需要在离开区域时自动关闭的对象，例如锁。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;poem.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Programming is fun
+When the work is done
+if you wanna make your work also fun:
+    use Python!
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span></span><span class="o">!</span>rm -f poem.txt
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
