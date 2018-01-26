@@ -8,7 +8,7 @@
 all: build
 
 %.slides.html: %.ipynb
-	ipython nbconvert --to slides --reveal-prefix "http://cdn.jsdelivr.net/reveal.js/2.6.2" $<
+	jupyter-nbconvert --to slides --reveal-prefix "http://cdn.jsdelivr.net/reveal.js/3.0.0" $<
 
 build: 101-Python入门.slides.html 102-Python进阶.slides.html
 
